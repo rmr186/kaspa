@@ -10,13 +10,12 @@
 * [Kaspa Wallet](kaspa-repo/kaspa-wallet.md)
 * [Kaspa Full Node](kaspa-repo/kaspa-full-node.md)
 * [Kaspa Explorer API](kaspa-repo/kaspa-explorer-api.md)
-* [Kaspa Transactions](kaspa-repo/kaspa-transactions.md)
 * [Glossary of Terms](kaspa-repo/untitled.md)
 
 ## Mastering KaspaCoin <a id="introduction-to-blockdag-decentralized-ledgers"></a>
 
 * [1. The Kaspacoin Network](introduction-to-blockdag-decentralized-ledgers/1.-introduction-to-kaspacoin/README.md)
-  * [Kaspa Transactions](introduction-to-blockdag-decentralized-ledgers/1.-introduction-to-kaspacoin/kaspa-transactions.md)
+  * [Kaspa Transactions](introduction-to-blockdag-decentralized-ledgers/1.-introduction-to-kaspacoin/kaspa-transactions-1.md)
   * [Blocks, Mining, & UTXOs](introduction-to-blockdag-decentralized-ledgers/1.-introduction-to-kaspacoin/dags-instead-chains.md)
   * [Scaling Bitcoin](introduction-to-blockdag-decentralized-ledgers/1.-introduction-to-kaspacoin/scaling-bitcoin.md)
   * [PHANTOM Protocol](introduction-to-blockdag-decentralized-ledgers/1.-introduction-to-kaspacoin/phantom-protocol.md)

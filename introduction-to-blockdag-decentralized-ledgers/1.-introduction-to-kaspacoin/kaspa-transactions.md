@@ -1,2 +1,0 @@
-# Kaspa Transactions
-
