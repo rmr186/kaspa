@@ -57,7 +57,3 @@
   * [Security & Privacy](introduction-to-blockdag-decentralized-ledgers/7.-kaspa-smart-contracts/security-and-privacy.md)
 * [8. The KaspaCoin Network](introduction-to-blockdag-decentralized-ledgers/8.-the-kaspacoin-network.md)
 
-## Mike Sessions
-
-* [Ordering Blocks into a Selected Parent Chains](mike-sessions/ordering-blocks-into-a-selected-parent-chains.md)
-
