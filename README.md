@@ -1,5 +1,5 @@
 ---
-description: next generation of trust-less distributed ledgers
+description: next generation trustless distributed ledgers
 ---
 
 # Kaspacoin Intro & Quick-start
