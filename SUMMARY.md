@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Kaspacoin Intro & Quick-start](README.md)
+* [Kaspacoin Intro](README.md)
+* [Kaspa Devnet Quick-Start](kaspa-devnet-quick-start.md)
 * [The Kaspa Stack](kaspa-blockdag.md)
 * [DAG Consensus Protocols](kaspa-overview.md)
 * [Running a Kaspa Full Node](btcd-bash-commands.md)
