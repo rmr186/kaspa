@@ -3,6 +3,7 @@
 * [Kaspacoin Intro & Quick-start](README.md)
 * [The Kaspa Stack](kaspa-blockdag.md)
 * [DAG Consensus Protocols](kaspa-overview.md)
+* [Running a Kaspa Full Node](btcd-bash-commands.md)
 
 ## Kaspa Repo
 
