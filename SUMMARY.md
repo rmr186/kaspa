@@ -4,6 +4,7 @@
 * [The Kaspa Stack](kaspa-blockdag.md)
 * [DAG Consensus Protocols](kaspa-overview.md)
 * [Running a Kaspa Full Node](btcd-bash-commands.md)
+* [Kaspa btcctl bash commands](kaspa-btcctl-bash-commands.md)
 
 ## Kaspa Repo
 

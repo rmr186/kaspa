@@ -27,9 +27,10 @@ description: >-
 
 `/btcd/cmd/btcctl$ /btcctl$ go run . --rpcuser=user --rpcpass=pass --rpcserver=localhost:18334 --devnet getPeerInfo  
   
-/btcd/cmd/btcctl$ go run ./mining/simulator/... --addresslist=<(printf "`[`127.0.0.1:18334`](http://127.0.0.1:18334)`\n127.0.0.1:18336") --notls  
-  
----/btcctl$` **`go run . --rpcuser=user --rpcpass=pass --rpcserver=localhost:18334 --devnet -l`**
+/btcd/cmd/btcctl$ go run ./mining/simulator/... --addresslist=<(printf "\n127.0.0.1:18336") --notls`[`127.0.0.1:18334`](http://127.0.0.1:18334)  
+``
+
+`/btcctl$`**`go run . --rpcuser=user --rpcpass=pass --rpcserver=localhost:18334 --devnet -l`**
 
 ## Chain Server Commands:
 
@@ -164,6 +165,20 @@ verifyMessage "address" "signature" "message"
 verifyTxOutProof "proof"  
 version`  
   
+:~/kaspacoin/btcd$ go run . --dnsseed devnet-dnsseed.daglabs.com --rpclisten=localhost:18334 --rpcuser=user --rpcpass=pass --devnet --notls --miningaddr=dagtest:qrgufg4qzfqacfzrf6xvx46aqedr5nke3qv6a74fex
+
+2019-09-22 11:32:22.553 \[WRN\] CNFG: open /home/roni/.btcd/btcd.conf: no such file or directory 2019-09-22 11:32:22.554 \[INF\] BTCD: Version 0.12.0-beta 
+
+2019-09-22 11:32:22.554 \[INF\] BTCD: Loading block database from '/home/roni/.btcd/data/devnet/blocks\_ffldb' 2019-09-22 11:32:22.567 \[INF\] BTCD: Block database loaded 2019-09-22 11:32:22.569 \[INF\] CHAN: Loading block index... 
+
+2019-09-22 11:32:23.454 \[INF\] CHAN: Loading UTXO set... 2019-09-22 11:32:32.739 \[INF\] CHAN: DAG state \(chain height 110635, hash 00001c0bd807e66ad7907fb2cc73ae3e1aabce2e20a4d03737b1d0ea718f0344\) 
+
+2019-09-22 11:32:32.745 \[INF\] RPCS: RPC server listening on 127.0.0.1:18334 2019-09-22 11:32:32.748 \[INF\] ADXR: Loaded 11 addresses from file '/home/roni/.btcd/data/devnet/peers.json' 2019-09-22 11:32:32.748 \[INF\] CMGR: Server listening on 0.0.0.0:18333 2019-09-22 11:32:32.748 \[INF\] CMGR: Server listening on \[::\]:18333 2019-09-22 11:32:33.121 \[INF\] CMGR: 3 addresses found from DNS seed n.devnet-dnsseed.daglabs.com
+
+`roni@ori-OptiPlex-7060:~/kaspacoin/btcd$ cd cmd roni@ori-OptiPlex-7060:~/cd btcctl`
+
+`kaspacoin/btcd/cmd$ ls -l total 32 drwxrwxr-x 2 roni roni 4096 Sep 22 11:20 addblock drwxrwxr-x 2 roni roni 4096 Sep 22 11:20 addsubnetwork drwxrwxr-x 2 roni roni 4096 Sep 22 11:20 btcctl drwxrwxr-x 2 roni roni 4096 Sep 22 11:20 findcheckpoint drwxrwxr-x 2 roni roni 4096 Sep 22 11:20 genaddr drwxrwxr-x 2 roni roni 4096 Sep 22 11:20 gencerts drwxrwxr-x 2 roni roni 4096 Sep 22 11:20 genesis drwxrwxr-x 3 roni roni 4096 Sep 22 11:20 txgen roni@ori-OptiPlex-7060:~/kaspacoin/btcd/cmd$`
+
   
 
 
