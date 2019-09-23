@@ -4,7 +4,7 @@ description: next generation trustless distributed ledgers
 
 # Kaspacoin Intro
 
-Bitcoin is awesome, and before starting you should know that Kaspacoin is based on Bitcoin, developed by researchers striving to stay as true as possible to Bitcoin's principles, and Kaspa's core codebase is actually a fork of a Golang implementation of Bitcoin called 'btcd'.
+= Bitcoin is awesome, and before starting you should know that Kaspacoin is based on Bitcoin, developed by researchers striving to stay as true as possible to Bitcoin's principles, and Kaspa's core codebase is actually a fork of a Golang implementation of Bitcoin called 'btcd'.
 
 So, why did we make Kaspacoin? The Kaspa Network is what's called a Directed Acyclic Graph \(DAG\) of blocks, rather then a 'Chain' of blocks.
 
