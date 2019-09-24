@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Kaspa Developer Guide](README.md)
+* [Kaspa BlockDAG Core Repo](README.md)
 
 ## Basic Kaspa Concepts
 
