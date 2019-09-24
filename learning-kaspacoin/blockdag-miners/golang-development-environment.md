@@ -1,2 +1,0 @@
-# Golang Development Environment
-

@@ -1,2 +1,0 @@
-# KaspaCoin Smart Contracts & Silos
-

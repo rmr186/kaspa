@@ -1,2 +1,0 @@
-# KaspaCoin JSON.RPC API
-

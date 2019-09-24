@@ -18,13 +18,13 @@ As an overview, you should keep in mind the following about Kaspa Transactions:
 
 The following diagram shows how a Tx is made up of ins & outs, which are themselves references to other Txs.  
 
-![&apos;UTXO Set&apos; means all Tx inputs without corresponding Tx outputs ](../../.gitbook/assets/tx-atomic.png)
+![&apos;UTXO Set&apos; means all Tx inputs without corresponding Tx outputs ](../.gitbook/assets/tx-atomic.png)
 
 ###  Tx Lifecycle & Flow in Kaspa
 
 Transactions are the core flow of the ....
 
-![](../../.gitbook/assets/tx-play.png)
+![](../.gitbook/assets/tx-play.png)
 
 ### Kaspa's Tx Implementation in Golang
 
