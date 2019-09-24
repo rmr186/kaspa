@@ -18,7 +18,14 @@ All the basic components needed for running a p2p transaction ledger are availab
   * Fast, reliable network analysis tools
 * Kaspa Package Utilities:
   * Commonly used Kaspa packages are outlined in the next section.
-  * After completing Quick Start, the first real step as a Kaspa Developer is to get to know these packages and how they implement the BlockDAG decentralized ledger design based on the GhostDAG protocol.
+
+## Next Steps
+
+We highly suggest you spend a little time understanding how BlockDAGs work, how they are different then Bitcoin as well as in what way both these 'proof of work' consensus protocols really work the same.
+
+After getting a feel for Kaspa \(and maybe reading the GhostDAG protocol's white paper\), you will most likely next start getting to know how Kaspa packages work as you start to interact with the Kaspa Devnet.
+
+
 
 
 
