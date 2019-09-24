@@ -1,21 +1,11 @@
----
-description: Connecting to Kaspa Devnet in under 5 minutes...
----
-
-# Kaspa Devnet Quick-Start
-
-## Kaspa Network Topology
-
-![overview of current Kaspa devnet](.gitbook/assets/basic-network-security-diagram.png)
-
-## Running a local Kaspa node using Docker
+# Running a local Kaspa node using Docker
 
 Lucky for you we made a handy little Docker container that actually does a lot:
 
-1. Compiles & runs the Kaspa code creating 2 distinc Kaspa Nodes.
+1. Compiles & runs the Kaspa code creating 2 distinct Kaspa Nodes.
 2. Connects the 2 Kaspa nodes forming a local Kaspa network .
 
-Follow these instructions to download and run the Kaspa DevNet container:
+Follow these instructions to download and run the Kaspa Devnet container:
 
 ### Clone the Kaspa Github \(btcd for now\) repository locally
 

@@ -1,10 +1,4 @@
----
-description: >-
-  Building & running a node, connecting to DevNet, and querying the network
-  using JSON.RPC.
----
-
-# Running a Kaspa Full Node
+# Running a local Kaspa network
 
 ## Start a local dev network:
 

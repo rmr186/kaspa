@@ -1,2 +1,0 @@
-# Kaspa Full Node
-
