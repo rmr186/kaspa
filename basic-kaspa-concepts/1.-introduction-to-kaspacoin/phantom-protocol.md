@@ -1,2 +1,0 @@
-# PHANTOM Protocol
-
