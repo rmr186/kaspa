@@ -1,0 +1,2 @@
+# Optical Proof of Work
+

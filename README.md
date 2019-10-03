@@ -1,4 +1,11 @@
-# Kaspa BlockDAG Core Repo
+---
+description: >-
+  Orientation of a new user on the docs site. What is this (a short what is
+  Kaspa and the Kaspa Initiative paragraph)? Who are these docs intended for?
+  What can be found here? Quick links?
+---
+
+# Welcome to Kaspa
 
 This repository holds the core Golang implementation of a Kaspa - a modified PHANTOM protocol forming the world's first truly decentralized & robust value transfer using Proof of Work consensus & Staking based trustless smart contracts.
 
