@@ -5,12 +5,18 @@
 ## About Kaspa
 
 * [Kaspa Overview](about-kaspa/kaspa-overview.md)
-* [Transaction](about-kaspa/transaction.md)
-* [UTXO](about-kaspa/utxo.md)
+* [Transaction & UTXO](about-kaspa/transaction.md)
 * [Blocks, DAG & PoW](about-kaspa/blocks-dag-and-pow.md)
 * [Phantom Consensus](about-kaspa/dag-consensus-logic.md)
-* [Smart Contracts](about-kaspa/smart-contracts.md)
 * [Kaspa Resources](about-kaspa/kaspa-resources.md)
+
+## Smart Contracts
+
+* [Smart Contracts](smart-contracts/smart-contracts.md)
+* [Use Cases](smart-contracts/use-cases/README.md)
+  * [Stable Coin](smart-contracts/use-cases/stable-coin.md)
+  * [Decentralized VISA-like Credit](smart-contracts/use-cases/decentralized-visa-like-credit.md)
+* [Developer Incentives](smart-contracts/developer-incentives.md)
 
 ## Community
 
