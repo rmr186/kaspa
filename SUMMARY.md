@@ -4,10 +4,12 @@
 
 ## About Kaspa
 
-* [Kaspa Overview](about-kaspa/kaspa-overview.md)
-* [Transaction & UTXO](about-kaspa/transaction.md)
-* [Blocks, DAG & PoW](about-kaspa/blocks-dag-and-pow.md)
-* [Phantom Consensus](about-kaspa/dag-consensus-logic.md)
+* [Kaspa Overview](about-kaspa/kaspa-overview/README.md)
+  * [Consensus Layer](about-kaspa/kaspa-overview/consensus-layer/README.md)
+    * [Transaction & UTXO](about-kaspa/kaspa-overview/consensus-layer/transaction.md)
+    * [Blocks, DAG & PoW](about-kaspa/kaspa-overview/consensus-layer/blocks-dag-and-pow.md)
+    * [Phantom Consensus](about-kaspa/kaspa-overview/consensus-layer/dag-consensus-logic.md)
+  * [Smart Contracts Layer](about-kaspa/kaspa-overview/smart-contracts-layer.md)
 * [Kaspa Resources](about-kaspa/kaspa-resources.md)
 
 ## Smart Contracts
