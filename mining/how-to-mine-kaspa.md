@@ -1,0 +1,2 @@
+# How to Mine Kaspa
+

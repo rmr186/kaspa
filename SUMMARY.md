@@ -35,13 +35,15 @@
 
 * [Introduction to Mining](mining/untitled.md)
 * [Optical Proof of Work](mining/optical-proof-of-work.md)
+* [How to Mine Kaspa](mining/how-to-mine-kaspa.md)
 * [Mining Incentives](mining/mining-incentives.md)
 
-## Block Explorer API <a id="explorer-api"></a>
+## Node API <a id="explorer-api"></a>
 
 * [Purpose](explorer-api/untitled.md)
 * [API Calls](explorer-api/api-calls.md)
 * [Object Types](explorer-api/object-types.md)
+* [CLI](explorer-api/cli.md)
 
 ## Codebase
 
