@@ -47,8 +47,8 @@
 
 ## Codebase
 
-* [Quick Starting a Kaspa Local Node](codebase/quick-starting-a-kaspa-local-node.md)
 * [Overview of Kaspa Full Node Operations](codebase/overview-of-kaspa-full-node-operations.md)
+* [Quick Starting a Kaspa Local Node](codebase/quick-starting-a-kaspa-local-node.md)
 * [Introducing Kaspa Transactions](codebase/introducing-kaspa-transactions.md)
 * [Kaspa Codebase Reference](codebase/kspa-codebase/README.md)
   * [btcd](codebase/kspa-codebase/btcd.md)

@@ -19,6 +19,8 @@ So, here's the first thing you probably want to do - launch a local Kaspa node a
 
 For instructions on building & running your local Kaspa node please see [this article](quick-starting-a-kaspa-local-node.md).
 
+Fore general information about Kaspa transactions please [see this guide](introducing-kaspa-transactions.md).
+
 Once you have a couple of nodes running and you can successfully connect via btcctl commands you should be ready to pick up the tutorial from here.
 
 {% hint style="info" %}
