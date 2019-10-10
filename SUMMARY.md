@@ -47,7 +47,7 @@
 
 ## Codebase
 
-* [Kaspa Codebase](codebase/kspa-codebase/README.md)
+* [Kaspa Codebase Reference](codebase/kspa-codebase/README.md)
   * [btcd](codebase/kspa-codebase/btcd.md)
   * [cmd](codebase/kspa-codebase/cmd.md)
   * [btcctl](codebase/kspa-codebase/btcctl.md)

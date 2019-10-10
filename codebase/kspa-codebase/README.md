@@ -1,4 +1,4 @@
-# Kaspa Codebase
+# Kaspa Codebase Reference
 
 The following are the important packages used in Kaspa's Go implementation:
 
