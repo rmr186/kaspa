@@ -1,7 +1,3 @@
----
-description: Developer Reference to Kaspa's Go Codebase
----
-
 # Kaspa Codebase
 
 The following are the important packages used in Kaspa's Go implementation:
