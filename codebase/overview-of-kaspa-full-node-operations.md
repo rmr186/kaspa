@@ -12,7 +12,7 @@ So, here's the first thing you probably want to do - launch a local Kaspa node a
 
 * Kaspa, like Bitcoin \(and unlike Ethereum\) uses UTXO sets instead of Accounts to calculate balance, with implications to how transactions are submitted, verified, determine tx fee, etc.
 * Like Ethereum, Kaspa uses 'gas' to compensate for computational costs, however Kaspa's gas fee is preset, unlike Ethereum where you set a gas limit but the actual gas fee is determined in runtime.
-* For an overview of the Kaspa protocol & some basics about the Kaspa network, please see [this article](../).
+* For an overview of the Kaspa protocol & some basics about the Kaspa network, please see [this article](quick-starting-a-kaspa-local-node.md).
 * The current codebase is configured to work with DevNet, working with TestNet \(and eventually MainNet\) may require some changes.
 
 ## Running a local Kaspa node:
