@@ -17,9 +17,13 @@ So, here's the first thing you probably want to do - launch a local Kaspa node a
 
 ## Running a local Kaspa node:
 
-For instructions on building & running your local Kaspa node please see this article.
+For instructions on building & running your local Kaspa node please see [this article](quick-starting-a-kaspa-local-node.md).
 
-Once you have a couple of nodes running and you can successfully connect via btcctl commands you should be ready to pick up the tutrial from here.
+Once you have a couple of nodes running and you can successfully connect via btcctl commands you should be ready to pick up the tutorial from here.
+
+{% hint style="info" %}
+Keep in mind you need at least 2 running nodes to have any meaningful trasactions, as well as simulating mining to create blocks.
+{% endhint %}
 
 ## Network Configuration \(Local Dev\):
 
