@@ -27,7 +27,7 @@ Once you have a couple of nodes running and you can successfully connect via btc
 Keep in mind you need at least 2 running nodes to have any meaningful transactions, as well as simulating mining to create blocks.
 {% endhint %}
 
-## Network Configuration \(Local Dev\):
+## Other network configuration \(local dev\):
 
 For local development, you can use the following default credentials:
 
