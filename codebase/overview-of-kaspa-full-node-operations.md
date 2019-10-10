@@ -8,12 +8,14 @@ I assume you're here because you finally got your hands on our Kaspa code repo a
 
 So, here's the first thing you probably want to do - launch a local Kaspa node and start playing around with some transactions \('tx' from now on, ok?\)
 
-But first, some necessary preliminaries:
+## Preliminaries:
 
 * Kaspa, like Bitcoin \(and unlike Ethereum\) uses UTXO sets instead of Accounts to calculate balance, with implications to how transactions are submitted, verified, determine tx fee, etc.
 * Like Ethereum, Kaspa uses 'gas' to compensate for computational costs, however Kaspa's gas fee is preset, unlike Ethereum where you set a gas limit but the actual gas fee is determined in runtime.
-* 
-Some \[random?\] configurations for DevNet3:
+* For an overview of the Kaspa protocol & some basics about the Kaspa network, please see [this article](../).
+* The current codebase is configured to work with DevNet, working with TeestNet \(and eventually MainNet\) may require some changes.
+
+## Some \[random?\] configurations for DevNet3:
 
 ```text
 --devnet
