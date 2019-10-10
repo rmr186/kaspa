@@ -27,6 +27,14 @@ We highly suggest you spend a little time understanding how BlockDAGs work, how 
 
 After getting a feel for Kaspa \(and maybe reading the GhostDAG protocol's white paper\), you will most likely next start getting to know how Kaspa packages work as you start to interact with the Kaspa Devnet.
 
+[Next, try running your own local full node.](codebase/quick-starting-a-kaspa-local-node.md)
+
+After you've got your node running, [check out this brief tutorial on node operations](codebase/overview-of-kaspa-full-node-operations.md) to learn how to generate transactions.
+
+Finally, you can dig deeper into [Kaspa transactions](codebase/introducing-kaspa-transactions.md), or dive into our [codebase reference](codebase/kspa-codebase/).
+
+And please remember this documentation and guides are all a work in progress, for any comments or suggestions, please reach out to us on [Github](https://github.com/daglabs).
+
 
 
 
