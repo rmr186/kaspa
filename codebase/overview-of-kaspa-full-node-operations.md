@@ -13,9 +13,17 @@ So, here's the first thing you probably want to do - launch a local Kaspa node a
 * Kaspa, like Bitcoin \(and unlike Ethereum\) uses UTXO sets instead of Accounts to calculate balance, with implications to how transactions are submitted, verified, determine tx fee, etc.
 * Like Ethereum, Kaspa uses 'gas' to compensate for computational costs, however Kaspa's gas fee is preset, unlike Ethereum where you set a gas limit but the actual gas fee is determined in runtime.
 * For an overview of the Kaspa protocol & some basics about the Kaspa network, please see [this article](../).
-* The current codebase is configured to work with DevNet, working with TeestNet \(and eventually MainNet\) may require some changes.
+* The current codebase is configured to work with DevNet, working with TestNet \(and eventually MainNet\) may require some changes.
 
-## Some \[random?\] configurations for DevNet3:
+## Running a local Kaspa node:
+
+For instructions on building & running your local Kaspa node please see this article.
+
+Once you have a couple of nodes running and you can successfully connect via btcctl commands you should be ready to pick up the tutrial from here.
+
+## Network Configuration \(Local Dev\):
+
+For local development, you can use the following default credentials:
 
 ```text
 --devnet
@@ -32,6 +40,16 @@ So, here's the first thing you probably want to do - launch a local Kaspa node a
 --miningaddr
 dagtest:qz9wgwh7kfv9zuxvwst55a7sesjvjpjvsst7ehwzh0
 ```
+
+{% hint style="info" %}
+Note that for local development you're setting the network to --_devnet_.  This setting affects how your network's Genesis block will be created.
+{% endhint %}
+
+{% hint style="info" %}
+For --_miningaddr_ you can use any address created using the _genaddr_ command in the _cmd_ package.
+{% endhint %}
+
+
 
 * tx-gen : receives all the blocks, private key, knows how to generate address,
 
