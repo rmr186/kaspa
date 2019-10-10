@@ -57,7 +57,11 @@ For --_miningaddr_ you can use any address created using the _genaddr_ command i
 
 ## Basic Kaspa network architecture
 
-![](../.gitbook/assets/kaspa-basic-local-architecture-1.png)
+When you launch a local full node you can use it to generate a new Kaspa address.  Use this address as the minindAddr for Kaspa's Mining Simulator, writing a new block ever 1 second and simulating all the other functions performed by Kaspa miners.
+
+We recommend also launching a second node, allowing you to connect to a multi-node network which is considerably more phone then going at it alone :\) 
+
+![Basic local configuration](../.gitbook/assets/kaspa-basic-local-architecture-1.png)
 
 * tx-gen : receives all the blocks, private key, knows how to generate address,
 
