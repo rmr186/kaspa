@@ -22,7 +22,7 @@ For instructions on building & running your local Kaspa node please see [this ar
 Once you have a couple of nodes running and you can successfully connect via btcctl commands you should be ready to pick up the tutorial from here.
 
 {% hint style="info" %}
-Keep in mind you need at least 2 running nodes to have any meaningful trasactions, as well as simulating mining to create blocks.
+Keep in mind you need at least 2 running nodes to have any meaningful transactions, as well as simulating mining to create blocks.
 {% endhint %}
 
 ## Network Configuration \(Local Dev\):
@@ -53,7 +53,9 @@ Note that for local development you're setting the network to --_devnet_.  This 
 For --_miningaddr_ you can use any address created using the _genaddr_ command in the _cmd_ package.
 {% endhint %}
 
+## Basic Kaspa network architecture
 
+![](../.gitbook/assets/kaspa-basic-local-architecture-1.png)
 
 * tx-gen : receives all the blocks, private key, knows how to generate address,
 
@@ -63,7 +65,7 @@ For --_miningaddr_ you can use any address created using the _genaddr_ command i
 
   **--  address that if you do mining you use this address**
 
-* main config take private key and create address tx-gen creates tx and store locally connect to server: connect to a node on DevNet3 user/pass for rpc connect to node transmit user/pass address !success notify blocks: bring me all the blocks,... send via websocket 'yes' -- callbacks for different notification send to channel \(another place reads and handles this channel\) receive block header only for requested tx, other then explicit block address which can include complete tx detal 'Spawn' - Kaspa's Go routine, better handles underlying 'panic' preventing a crash. Use Spawn instead of Go. -- insert tx-loop, if any issue force 'panic' -- create channel \(receives events, waits for you to receive something for channel\) -- runs until exit
+* main config take private key and create address tx-gen creates tx and store locally connect to server: connect to a node on DevNet3 user/pass for rpc connect to node transmit user/pass address !success notify blocks: bring me all the blocks,... send via websocket 'yes' -- callbacks for different notification send to channel \(another place reads and handles this channel\) receive block header only for requested tx, other then explicit block address which can include complete tx detail 'Spawn' - Kaspa's Go routine, better handles underlying 'panic' preventing a crash. Use Spawn instead of Go. -- insert tx-loop, if any issue force 'panic' -- create channel \(receives events, waits for you to receive something for channel\) -- runs until exit
 
 tx-loop: \[
 
