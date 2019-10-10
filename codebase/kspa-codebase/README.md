@@ -59,9 +59,15 @@ The following are the important packages used in Kaspa's Go implementation:
     </tr>
     <tr>
       <td style="text-align:left">rpcclient</td>
-      <td style="text-align:left">Websocket-enabled JSON-RPC client requests to the local Kaspa node</td>
-      <td
-      style="text-align:left">
+      <td style="text-align:left">
+        <p>Websocket-enabled JSON-RPC client requests to the local Kaspa node
+          <br
+          />
+        </p>
+        <p>(<em>rpcclient</em> is relatively heavy, for bigger request volume run
+          an <em>apiserver</em> instead.)</p>
+      </td>
+      <td style="text-align:left">
         <ul>
           <li>dag</li>
           <li>doc</li>
@@ -75,12 +81,16 @@ The following are the important packages used in Kaspa's Go implementation:
           <li>rawtransactions</li>
           <li></li>
         </ul>
-        </td>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">apiserver</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Code for running the Kaspa API Server</td>
+      <td style="text-align:left">
+        <ul>
+          <li></li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">addrmgr</td>

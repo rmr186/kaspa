@@ -47,6 +47,7 @@
 
 ## Codebase
 
+* [Overview of Kaspa Full Node Operations](codebase/overview-of-kaspa-full-node-operations.md)
 * [Kaspa Codebase Reference](codebase/kspa-codebase/README.md)
   * [btcd](codebase/kspa-codebase/btcd.md)
   * [cmd](codebase/kspa-codebase/cmd.md)
