@@ -8,7 +8,6 @@
   * [Consensus Layer](about-kaspa/kaspa-overview/consensus-layer/README.md)
     * [Transaction & UTXO](about-kaspa/kaspa-overview/consensus-layer/transaction.md)
     * [Blocks, DAG & PoW](about-kaspa/kaspa-overview/consensus-layer/blocks-dag-and-pow.md)
-    * [Phantom Consensus](about-kaspa/kaspa-overview/consensus-layer/dag-consensus-logic.md)
   * [Smart Contracts Layer](about-kaspa/kaspa-overview/smart-contracts-layer.md)
 * [Kaspa Resources](about-kaspa/kaspa-resources.md)
 
