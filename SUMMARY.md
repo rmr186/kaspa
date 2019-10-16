@@ -37,12 +37,16 @@
 * [How to Mine Kaspa](mining/how-to-mine-kaspa.md)
 * [Mining Incentives](mining/mining-incentives.md)
 
-## Node API <a id="explorer-api"></a>
+## API Reference
 
-* [Purpose](explorer-api/untitled.md)
-* [API Calls](explorer-api/api-calls.md)
-* [Object Types](explorer-api/object-types.md)
-* [CLI](explorer-api/cli.md)
+* [API Architecture](api-reference/untitled.md)
+* [API Server](api-reference/api-calls/README.md)
+  * [API Server Reference](api-reference/api-calls/api-server-components.md)
+  * [API Usage Examples](api-reference/api-calls/node-client-examples.md)
+* [JSON-RPC API Calls](api-reference/object-types/README.md)
+  * [Consensus Examples](api-reference/object-types/consensus-examples.md)
+  * [Mining Examples](api-reference/object-types/mining-examples.md)
+* [CLI Commands Reference](api-reference/cli.md)
 
 ## Codebase
 

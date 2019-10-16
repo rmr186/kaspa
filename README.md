@@ -1,15 +1,11 @@
 ---
 description: >-
-  Orientation of a new user on the docs site. What is this (a short what is
-  Kaspa and the Kaspa Initiative paragraph)? Who are these docs intended for?
-  What can be found here? Quick links?
+  Kaspa is a decentralized digital currency based on a modified version of the
+  PHANTOM protocol, using Proof of Work consensus as well as a new approach to
+  staking-based trustless smart contracts.
 ---
 
 # Welcome to Kaspa
-
-This repository holds the core Golang implementation of a Kaspa - a modified PHANTOM protocol forming the world's first truly decentralized & robust value transfer using Proof of Work consensus & Staking based trustless smart contracts.
-
-make another quick change at the end
 
 ## Kaspa Repo Structure
 
