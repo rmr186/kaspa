@@ -1,5 +1,8 @@
 # API Server Internal Operations
 
+* [ ] \[1h\] Move to API Server Reference section
+* [ ] \[1h\] write introduction
+
 ## Bootstrapping Procedure
 
 1. API-Server starts with an empty database.

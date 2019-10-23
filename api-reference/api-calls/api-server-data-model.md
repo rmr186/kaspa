@@ -4,7 +4,9 @@ description: 'Describing the API Server data types, database schema, etc.'
 
 # API Server Data Model
 
-
+* [ ] \[1h\] Intro paragraph
+* [ ] \[1h\] Format it nicely
+* [ ] \[1h\] Move ther DB Schema part to a new page in a new API Server Reference section together with the operations page.
 
 ## List of API Server Response Types
 

@@ -1,5 +1,10 @@
 # API Server Request List
 
+* [ ] \[1h\] Write introduction paragraph
+* [ ] \[2h\] Explain about the use case for each method
+* [ ] \[1h\] Fix responses
+* [ ] \[4h\] Give an example for each request & response
+
 ## List of API Calls
 
 {% hint style="info" %}
