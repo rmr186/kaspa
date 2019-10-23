@@ -41,8 +41,11 @@
 
 * [API Architecture](api-reference/untitled.md)
 * [API Server](api-reference/api-calls/README.md)
-  * [API Server Reference](api-reference/api-calls/api-server-components.md)
-  * [API Usage Examples](api-reference/api-calls/node-client-examples.md)
+  * [API Server Setup](api-reference/api-calls/api-server-setup.md)
+  * [API Server Data Model](api-reference/api-calls/api-server-data-model.md)
+  * [API Server Request List](api-reference/api-calls/api-server-request-list.md)
+  * [API Server Internal Operations](api-reference/api-calls/api-server-components.md)
+  * [API Server Examples](api-reference/api-calls/node-client-examples.md)
 * [JSON-RPC API Calls](api-reference/object-types/README.md)
   * [Consensus Examples](api-reference/object-types/consensus-examples.md)
   * [Mining Examples](api-reference/object-types/mining-examples.md)
