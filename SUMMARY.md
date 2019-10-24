@@ -25,8 +25,7 @@
 
 ## Running a Kaspa Node <a id="running-a-node"></a>
 
-* [Installing](running-a-node/installing.md)
-* [Running a Node](running-a-node/untitled.md)
+* [Running a Full Node](running-a-node/untitled.md)
 * [Joining TestNet](running-a-node/joining-testnet.md)
 * [Run a Local DevNet](running-a-node/run-a-local-devnet.md)
 
