@@ -23,9 +23,9 @@
 
 * [Community Guide](community/community-guide.md)
 
-## Running a Kaspa Node <a id="running-a-node"></a>
+## Running a Node
 
-* [Running a Full Node](running-a-node/untitled.md)
+* [How to Setup & run a Full Node](running-a-node/setup.md)
 * [Detailed node operations](running-a-node/joining-testnet.md)
 * [Run a Local DevNet](running-a-node/run-a-local-devnet.md)
 

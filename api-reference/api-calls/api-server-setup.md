@@ -4,14 +4,14 @@ description: Dedicated server
 
 # Run a Kaspa API Server
 
-The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa full node running on the same machine. You will need to [setup and run a full node before proceeding](../../running-a-node/untitled.md).  
+The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa full node running on the same machine. You will need to [setup and run a full node before proceeding](../../running-a-node/setup.md).  
 
 ### Prerequisites
 
 * Setup Go runtime, and Git onto the machine you want to use. 
 * Clone the Kaspa open source code from [https://github.com/daglabs/api-server](https://github.com/daglabs/api-server).
 * Install this pre-configured MySQL Docket container.
-* [Start a Kaspa Full Node & Connect to DevNet](../../running-a-node/untitled.md)
+* [Start a Kaspa Full Node & Connect to DevNet](../../running-a-node/setup.md)
 
 ### API Server Installation Steps
 

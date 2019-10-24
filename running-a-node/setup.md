@@ -1,8 +1,12 @@
 ---
-description: 'Build from source, setup, & run your own Kaspa BlockDAG node'
+description: >-
+  Kaspa's BlockDAG protocol lets nodes discover & collaborate with other peer
+  nodes forming Kaspa's peer-to-peer network.
 ---
 
-# Running a Full Node
+# How to Setup & run a Full Node
+
+## Running a Node on Kaspa's BlockDAG Network
 
 The full node plays a crucial role in the Kaspa network.  Every client application ultimately needs a Kaspa node to connect with the network.  The following instructions will show you how to build, setup, & run a full node from the Kaspa open source codebase.
 
