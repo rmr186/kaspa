@@ -26,7 +26,7 @@
 ## Running a Kaspa Node <a id="running-a-node"></a>
 
 * [Running a Full Node](running-a-node/untitled.md)
-* [Joining TestNet](running-a-node/joining-testnet.md)
+* [Detailed node operations](running-a-node/joining-testnet.md)
 * [Run a Local DevNet](running-a-node/run-a-local-devnet.md)
 
 ## Mining Kaspa <a id="mining"></a>
@@ -40,7 +40,7 @@
 
 * [API Architecture](api-reference/untitled.md)
 * [API Server](api-reference/api-calls/README.md)
-  * [API Server Setup](api-reference/api-calls/api-server-setup.md)
+  * [Run a Kaspa API Server](api-reference/api-calls/api-server-setup.md)
   * [API Server Data Model](api-reference/api-calls/api-server-data-model.md)
   * [API Server Request List](api-reference/api-calls/api-server-request-list.md)
   * [API Server Internal Operations](api-reference/api-calls/api-server-components.md)

@@ -1,36 +1,27 @@
-# API Server Setup
+---
+description: Dedicated server
+---
 
-* [ ] \[1d\] write steps
-* [ ] \[2h\] link to other sections for pre-requisites and add pages for them in the relevant place in the ToC.
+# Run a Kaspa API Server
 
-The API Server acts as an oracle onto the Kaspa network by by connecting to a full Kaspa node while running requests locally rather then connecting to a network node over the Internet.
-
-
-
-## QuickStart
-
-## Build & Run a Kaspa API Server:
-
-Clone the Kaspa open source code from DAGlabs' Github onto the machine you want to use.
-
-[https://github.com/daglabs/api-server](https://github.com/daglabs/api-server) \[todo: update url\]
+The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa full node running on the same machine. You will need to [setup and run a full node before proceeding](../../running-a-node/untitled.md).  
 
 ### Prerequisites
 
-* Setup Go runtime
-* Install MySql
-* Build & run Node \(btcd\)
+* Setup Go runtime, and Git onto the machine you want to use. 
+* Clone the Kaspa open source code from [https://github.com/daglabs/api-server](https://github.com/daglabs/api-server).
+* Install this pre-configured MySQL Docket container.
+* [Start a Kaspa Full Node & Connect to DevNet](../../running-a-node/untitled.md)
 
 ### API Server Installation Steps
 
-Install the following prerequisites:
+Once you have completed the above per-requisites, the remaining steps for setting up the API Server are:
 
-1. Build & run API Server
-2. Local Database Setup
-3. Connecting to the Kaspa network
-4. Test API Server connections & settings
-5. Starting the API Server
-6. Making sure it works
+1. Download & Launch Docker Image of MySQL Database
+2. Migrating API Server MySQL Database
+3. Connecting to your node on DevNet
+4. Starting the API Server
+5. Making sure it works
 
 ### Download & Launch Docker Image of MySQL Database
 
@@ -72,7 +63,7 @@ If successful, you should see the following response, meaning that you are final
 
 You are now ready to start the API Server & connect to your newly created database.
 
-### Start a Kaspa Full Node & Connect to DevNet
+### Connecting to your node on DevNet
 
 ```bash
 :~/code/btcd$ ./btcd --devnet --rpclisten=localhost:18334 --rpcuser=user --rpcpass=pass 

@@ -1,2 +1,2 @@
-# Joining TestNet
+# Detailed node operations
 

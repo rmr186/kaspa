@@ -1,14 +1,16 @@
 ---
-description: Get your own node running on the Kaspa TestNet
+description: 'Build from source, setup, & run your own Kaspa BlockDAG node'
 ---
 
 # Running a Full Node
 
-The full nodes play a critical role in the Kaspa network.  Every client application ultimately needs a Kaspa node to connect with the network.  
+The full node plays a crucial role in the Kaspa network.  Every client application ultimately needs a Kaspa node to connect with the network.  The following instructions will show you how to build, setup, & run a full node from the Kaspa open source codebase.
 
 If you are an application developer, you will likely want to run a node acting as a network point of access. If you are running a [Kaspa API Server](../api-reference/api-calls/api-server-setup.md) you will need a Kaspa node to connect it to the network.  If you are using [Kaspa's Websocket API ](../codebase/kspa-codebase/rpcclient.md)rest assure there is a Kaspa node connecting it to the network.
 
-The following instructions will help you get a full node setup with basic configuration.
+{% hint style="info" %}
+The following instructions will help you get a full node setup with the most basic configuration needed.  For more detailed node operations please see[ this guide](joining-testnet.md).
+{% endhint %}
 
 ## Prerequisites
 
@@ -30,15 +32,32 @@ Next, make sure you have the Go development environment installed \(if not, [use
 :~/code/btcd$ go version
 ```
 
-Next, install _btcd_ \(Kaspa Full Node\) using the Go _install_ command \(from the the _btcd_ directory\):
+Now it's time to build and install the Kaspa full node code.  From the the _btcd_ directory, run the following:
 
 ```bash
 :~/code/btcd$ go install . 
 ```
 
+Check that you have successfully installed the node by viewing the node command line help:
+
+```bash
+$ ./btcd --help
+Usage:
+  btcd [OPTIONS]
+
+Application Options:
+  -V, --version               Display version information and exit
+  -C, --configfile=           Path to configuration file (default: /home/roni/.btcd/btcd.conf)
+  -b, --datadir=              Directory to store data (default: /home/roni/.btcd/data)
+      --logdir=               Directory to log output. (default: /home/roni/.btcd/logs)
+  -a, --addpeer=              Add a peer to connect with at startup
+```
+
+Next, you will launch your node and connect to the Kaspa BlockDAG Devnet.
+
 ## Launch the Node
 
-To start the node with default configuration, use the following command:
+To start the node with default configuration, use the following command: 
 
 ```bash
 :~/code/btcd$ ./btcd
@@ -68,6 +87,30 @@ If successful, you should see the following response confirming your Kaspa node 
 2019-10-24 13:25:31.811 [INF] CMGR: 3 addresses found from DNS seed n.devnet-dnsseed.daglabs.com
 2019-10-24 13:26:03.766 [INF] RPCS: New websocket client 127.0.0.1:51374
 ```
+
+## Connecting to the Kaspa BlockDAG
+
+When launching a node \(using the btcd command above\) you specify the Kaspa BlockDAG network you wish to connect to.  Run the following code to launch a node connecting to the Kaspa Devnet:
+
+```bash
+$ ./btcd --devnet --rpclisten=localhost:18334 --rpcuser=user --rpcpass=pass --notls --acceptanceindex --txindex
+```
+
+The remaining arguments to the btcd command are the user, passwords, and other settings for the Kaspa Devnet.
+
+{% hint style="info" %}
+--_devnet_  is currently using permissioned access with the parameters above.  A new --_testnet_ is coming soon, which will be permission
+{% endhint %}
+
+Upon connecting to the network your node completes the following tasks:
+
+1. Loads the network's block database, indexes, & DAG state.
+2. Loads the network's current UTXO set.
+3. Creates Websocket RPC connections
+4. Loads addresses from DNS seed
+5. Listens for new Websocket connections.
+
+
 
 ## Documentation & Next Steps
 
