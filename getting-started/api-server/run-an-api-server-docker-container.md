@@ -1,19 +1,14 @@
----
-description: Dedicated server
----
+# Set Up an API Server
 
-# Run a Kaspa API Server
-
-The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa full node running on the same machine. You will need to [setup and run a full node before proceeding]().  
+The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa full node running on the same machine. You will need to [setup a full node](../running-a-node/build-a-node-server-from-source-code.md) before proceeding.  
 
 ### Prerequisites
 
 * Setup Go runtime, and Git onto the machine you want to use. 
+* \*\*\*\*[**Docker installed**](https://hub.docker.com/) ****& Docker Hub user account.  
 * Clone the Kaspa open source code from [https://github.com/daglabs/api-server](https://github.com/daglabs/api-server).
-* Install this pre-configured MySQL Docket container.
-* [Start a Kaspa Full Node & Connect to DevNet]()
 
-### API Server Installation Steps
+### API Server Installation Steps  <a id="api-server-installation-steps"></a>
 
 Once you have completed the above per-requisites, the remaining steps for setting up the API Server are:
 
@@ -23,7 +18,7 @@ Once you have completed the above per-requisites, the remaining steps for settin
 4. Starting the API Server
 5. Making sure it works
 
-### Download & Launch Docker Image of MySQL Database
+### Download & Launch Docker Image of MySQL Database <a id="download-and-launch-docker-image-of-mysql-database"></a>
 
 The following command downloads and installs a ready made Docker image for a pre-configured MySQL database for a Kaspa API Server.  You can download and learn more about Docker [here](https://hub.docker.com/).
 
@@ -46,7 +41,7 @@ Query OK, 1 row affected (0.02 sec)
 
 Next, you will need to run the following database migrations on to finish configuring your new database to work with the Kaspa API Server.
 
-### Migrating API Server MySQL Database
+### Migrating API Server MySQL Database <a id="migrating-api-server-mysql-database"></a>
 
 Run the following command from the /apiserver directory to run all necessary database migrations \(you can check out the SQL scripts for these migrations under the _btcd/apiserver/miogrations_ directory in the Kaspa repository\).
 
@@ -63,18 +58,13 @@ If successful, you should see the following response, meaning that you are final
 
 You are now ready to start the API Server & connect to your newly created database.
 
-### Connecting to your node on DevNet
+## Start the API Serve & Connect to the network:
 
-```bash
-:~/code/btcd$ ./btcd --devnet --rpclisten=localhost:18334 --rpcuser=user --rpcpass=pass 
---notls --acceptanceindex --txindex
-```
+## API Server Reference Guide
 
-```text
-:~/code/btcd/apiserver$ ./apiserver --rpcserver=localhost:18334 
---rpcuser=user --rpcpass=pass --notls --dbuser=root --dbpass=pass 
---dbaddress=localhost:42069 --dbname=kaspa --devnet
-```
+
+
+
 
 
 

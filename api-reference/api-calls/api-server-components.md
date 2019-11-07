@@ -1,10 +1,5 @@
 # API Server Internal Operations
 
-* [ ] \[1h\] Move to API Server Reference section
-* [ ] \[1h\] write introduction
-
-## Bootstrapping Procedure
-
 1. API-Server starts with an empty database.
 2. API-Server connects to Full-Node through JSON-RPC WebSocket.
 3. API-Server subscribes to Block and ChainUpdate notifications. For now storing the notifications without acting upon them until step 4 is complete.
