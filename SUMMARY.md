@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Example Use Cases](example-use-cases.md)
 
 ## Getting Started
 
