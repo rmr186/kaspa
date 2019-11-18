@@ -6,8 +6,8 @@ description: List of API request calls
 
 * [ ] \[1h\] Write introduction paragraph
 * [ ] \[2h\] Explain about the use case for each method
-* [ ] \[1h\] Fix responses
-* [ ] \[4h\] Give an example for each request & response
+* [x] \[1h\] Fix responses
+* [x] \[4h\] Give an example for each request & response
 
 This page lists the calls that can be requested from the API.
 
