@@ -4,7 +4,7 @@ description: Introduction to Kaspa Dev Net
 
 # Overview
 
-### Kaspa Software Components
+## Kaspa Components
 
 The Kaspa code repository includes the following components:
 
@@ -37,7 +37,7 @@ An alternative option, although less 'trust-less', is to connect to a public API
 
 The remaining pages in this Getting Started section will walk you through building and launching your own node, some basic commands, and successfully generating network data.
 
-For detailed description of available API methods, [please see this documentation section](../codebase/code-ref/apiserver.md).
+For detailed description of available API methods, [please see this documentation section](../api-reference/code-ref/apiserver.md).
 
 For more detailed information on the Kaspa BlockDAG [please see this knowledge base](../about-kaspa/kaspa-overview/).
 

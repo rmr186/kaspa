@@ -9,7 +9,7 @@ The API Server is a programmatic interface for interacting with the Kaspa networ
 If you are a developer building an application such as a wallet or a block explorer, you have two options:
 
 * You may connect to a community maintained API Server. Visit the [community guide](../../community/community-guide.md) for more info.
-* You may run your own API Server. There is a Docker image that you can run to [install an API Server with all its dependencies](../../getting-started/api-server/api-server-setup-using-docker.md). Alternatively, you can setup everything independently.
+* You may run your own API Server. There is a Docker image that you can run to [install an API Server with all its dependencies](../../try-kaspa/api-server/api-server-setup-using-docker.md). Alternatively, you can setup everything independently.
 
 {% hint style="info" %}
 If you want to make JSON-RPC API calls using any authenticated JSON-RPC client without running a dedicated serer please check out[ the JSON-RPC API reference](../rpc-api-ref/).  

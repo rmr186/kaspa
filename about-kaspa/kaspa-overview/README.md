@@ -32,5 +32,5 @@ After getting a feel for Kaspa \(and maybe reading the GhostDAG protocol's white
 
 After you've got your node running, [check out this brief tutorial on node operations]() to learn how to generate transactions.
 
-Finally, you can dig deeper into [Kaspa transactions](), or dive into our [codebase reference](../../codebase/code-ref/).
+Finally, you can dig deeper into [Kaspa transactions](), or dive into our [codebase reference](../../api-reference/code-ref/).
 
