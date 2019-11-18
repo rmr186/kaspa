@@ -4,13 +4,15 @@ description: Introducing the Kaspa BlockDAG Currency
 
 # Kaspa Overview
 
-## What's Kaspa?
+## What is Kaspa?
 
-Kaspa is a decentralized cryptocurrency based on the PHANTOM BlockDAG protocol.  
+Kaspa is a high throughput, photonic proof-of-work, expressive, sound money.
 
-It uses proof-of-work \(PoW\) mining with a staking based smart contract layer, with the promise of improved PoW transaction-throughput, decentralized smart-contract layer, as well as innovation in network-participation economics.
+Kaspa uses [Phantom](https://eprint.iacr.org/2018/104.pdf), a highly scalable and decentralized blockDAG consensus protocol, that generalizes over the [Nakamoto](https://bitcoin.org/bitcoin.pdf) consensus. It is called a block_DAG_ rather than a block_chain_ because instead of a chain of block, Kaspa's ledger is stored in a directed acyclic graph \(DAG\) of blocks. What this means is that many blocks can be created in parallel.
 
-You can learn more at [docs.kas.pa/org](https://docs.kas.pa/organization).
+Kaspa uses optical proof of work \(OPoW\) - an implementation of traditional proof of work \(PoW\) with photonic optical processors rather than silicone processors. OPoW retains the same security properties of traditional PoW, and because photonic processors are more energy efficient and green, allows for more sustainable and geographically decentralizing mining, and fair participation in mining rewards.
+
+for a Kaspa is optimized for sound and scalable store of value, payments, settlements, transfer of digital assets, and proof of publication. Kaspa enables a computation layer inspired by [Arbitrum](https://www.usenix.org/node/217514) and [TrueBit](https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf), and decoupled from the consensus layer, allowing for a scalable native currency while supporting and enhancing upper-layer use cases, such as stable tokens and decentralized credit systems.
 
 ## How Does it Work?
 

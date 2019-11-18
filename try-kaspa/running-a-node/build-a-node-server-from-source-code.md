@@ -71,7 +71,7 @@ $ ./btcd --devnet --rpclisten=localhost:18334 --rpcuser=user --rpcpass=pass --no
 | `--rpcuser` | User for node rpc connection |
 | `--rpcpass` | Password for node rpc connection |
 | `--notls` | Setting: use rpc user instead of TLS certificate |
-| `--acceptanceindex` | turns on the acceptance index, which allows one to quickly look up the blocks and transactions that were [accepted by a certain block](../../about-kaspa/kaspa-overview/dag-consensus/block-acceptance.md). |
+| `--acceptanceindex` | turns on the acceptance index, which allows one to quickly look up the blocks and transactions that were [accepted by a certain block](../../about-kaspa/kaspa-overview/block-acceptance.md). |
 | `--txindex` | turns on the transaction index, which allows one to quickly look up the blocks in which a certain transaction exists. |
 
 {% hint style="warning" %}
