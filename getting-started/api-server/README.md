@@ -1,12 +1,20 @@
+---
+description: A RESTful API for interacting with the Kaspa network
+---
+
 # API Server
 
-The API Server is a programmatic interface for interacting with the Kaspa network. The Kaspa network consists of inter-connected Kapsa full nodes. The API Server connects a Kaspa full node, connected to the Kaspa network, and exposes a list of RESTful API endpoints that allow interacting with the network. This allows clients, such as wallets and block explorer, connected to the API Server to easily interact with the Kaspa network. The API includes endpoints for sending a transaction, getting an address balance, listening for updates, and querying for blocks and transactions.
+The API Server is a programmatic interface for interacting with the Kaspa network. The Kaspa network is an inter-connected web of Kapsa full nodes, working together to maintain the distributed ledger. The API Server connects to one of the Kaspa full node, and exposes a list of RESTful API endpoints, that allow clients, such as wallets and block explorer, connected to the API Server, to send requests and receive notifications from the Kaspa network. The API allows things like sending a transaction, getting an address balance, listening for updates, and querying for blocks and transactions.
 
-If you are a developer building an application such as a wallet or a block explorer, you may connect to one of the community maintained API servers or you can set up your own server. If you choose to set up your own API server, you will also need to connect it to an a full node you have access to. If you do not have access to one, you can run one yourself and connect it to the Kaspa network.
+If you are a developer building an application such as a wallet or a block explorer, you have two options:
 
-If you want to extend the functionality of the API Server, or fork it, visit the GitHub.
+* You may connect to a community maintained API Server. Visit the [community guide](../../community/community-guide.md) for more info.
+* You may run your own API Server. There is a Docker image that you can run to [install an API Server with all its dependencies](api-server-setup-using-docker.md). Alternatively, you can setup everything independently.
 
-* For a list of RESTful API calls see the [API Server reference](./).
-* For setting up your own server, you can either use the [API Server Docker](../running-a-node/full-node-quick-setup-with-docker.md) or [compile from source](run-an-api-server-docker-container.md).
-* For contributing to the API Server development, visit GitHub.
+Once you have access to an API Server, you can start interacting with the Kaspa network.
+
+* For a list of RESTful API calls the API Server supports, see the [API Server reference](./).
+* You can download the command line wallet to create a wallet and send your first transaction.
+
+For contributing to the API Server development, visit [GitHub](https://github.com/daglabs).
 

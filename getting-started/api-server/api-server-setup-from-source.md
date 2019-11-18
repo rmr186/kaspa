@@ -1,4 +1,8 @@
-# Set Up an API Server
+---
+description: 'Install your own Kaspa API Server, from source'
+---
+
+# Set Up from Source
 
 The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa full node running on the same machine. You will need to [setup a full node](../running-a-node/build-a-node-server-from-source-code.md) before proceeding.  
 

@@ -1,7 +1,3 @@
----
-description: Dedicated server
----
-
 # Run a Kaspa API Server
 
 The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa full node running on the same machine. You will need to [setup and run a full node before proceeding]().  
