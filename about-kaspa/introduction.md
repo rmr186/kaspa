@@ -1,8 +1,0 @@
-# Introduction
-
-## Kaspa Overview
-
-
-
-
-

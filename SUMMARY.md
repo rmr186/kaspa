@@ -4,7 +4,6 @@
 
 ## About Kaspa
 
-* [Introduction](about-kaspa/introduction.md)
 * [Kaspa Overview](about-kaspa/kaspa-overview/README.md)
   * [DAG Consensus](about-kaspa/kaspa-overview/dag-consensus.md)
   * [Transaction & UTXO](about-kaspa/kaspa-overview/transaction.md)
