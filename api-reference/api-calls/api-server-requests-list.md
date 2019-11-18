@@ -746,7 +746,7 @@ The response is a feeEstimates object.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://api.kas.pa" path="/v1/transaction" %}
+{% api-method method="post" host="https://api.kas.pa" path="/dev/v1/transaction" %}
 {% api-method-summary %}
 /transaction
 {% endapi-method-summary %}
@@ -779,6 +779,9 @@ Base64-encoded raw transaction data
 {% endapi-method %}
 
 ## List of MQTT Topics
+
+* [ ] Explanation what this is for
+* [ ] Explanation that we use RabbitMQ and how to subscribe to topics
 
 ### **transactions/{address}**
 
