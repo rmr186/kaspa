@@ -8,15 +8,17 @@ description: Introducing the Kaspa BlockDAG Currency
 
 Kaspa is a high throughput, photonic proof-of-work, expressive, sound money.
 
-Kaspa uses [Phantom](https://eprint.iacr.org/2018/104.pdf), a highly scalable and decentralized blockDAG consensus protocol, that generalizes over the [Nakamoto](https://bitcoin.org/bitcoin.pdf) consensus. It is called a block_DAG_ rather than a block_chain_ because instead of a chain of block, Kaspa's ledger is stored in a directed acyclic graph \(DAG\) of blocks. What this means is that many blocks can be created in parallel.
+Kaspa is optimized for sound and scalable store of value, payments, settlements, transfer of digital assets, and proof of publication.
 
-Kaspa uses optical proof of work \(OPoW\) - an implementation of traditional proof of work \(PoW\) with photonic optical processors rather than silicone processors. OPoW retains the same security properties of traditional PoW, and because photonic processors are more energy efficient and green, allows for more sustainable and geographically decentralizing mining, and fair participation in mining rewards.
+## How Does Kaspa Work?
 
-for a Kaspa is optimized for sound and scalable store of value, payments, settlements, transfer of digital assets, and proof of publication. Kaspa enables a computation layer inspired by [Arbitrum](https://www.usenix.org/node/217514) and [TrueBit](https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf), and decoupled from the consensus layer, allowing for a scalable native currency while supporting and enhancing upper-layer use cases, such as stable tokens and decentralized credit systems.
+Kaspa uses [Phantom](https://eprint.iacr.org/2018/104.pdf), a highly scalable and decentralized blockDAG consensus protocol, that generalizes over the [Nakamoto](https://bitcoin.org/bitcoin.pdf) consensus. It is called a block_DAG_ rather than a block_chain_ because instead of a chain of block, Kaspa's ledger is stored in a directed acyclic graph \(DAG\) of blocks. What this means is that many blocks can be created in parallel. This in turn allows for near-immediate transaction confirmations.
 
-## How Does it Work?
+Kaspa uses optical proof of work \(OPoW\) - an implementation of traditional proof of work \(PoW\) with photonic optical processors rather than silicone processors. OPoW retains the same security properties of traditional PoW, and because photonic processors are more energy efficient and green, allows for more sustainable and geographically decentralizing mining. OPoW, coupled with the rapid block creation rate of the blockDAG, means it is much more likely for miners to find blocks, and makes Kaspa mining rewards fair game.
 
-All the basic components needed for running a p2p transaction ledger are available in the Kaspa Core Repo on [Github](https://github.com/daglabs).  Mainly these can be categorized as follows:
+Kaspa enables a[ smart contract](../smart-contracts.md) computation layer, inspired by [Arbitrum](https://www.usenix.org/node/217514) and [TrueBit](https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf), and decoupled from the consensus layer, allowing the native currency to remain lightweight and scalable, while supporting and enhancing upper-layer use cases, such as stable tokens and decentralized credit systems.
+
+All the basic components needed for running a p2p transaction ledger are available in the Kaspa Core Repo on [Github](https://github.com/daglabs). Mainly these can be categorized as follows:
 
 * Full Node \(FN\):  Compiling kspd,go will build a Kaspa full P2P node.
 * Pruned Node \(PN\): Doesn't keep archival tx info, or other node overhead.

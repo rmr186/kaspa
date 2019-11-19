@@ -5,7 +5,7 @@
 ## About Kaspa
 
 * [Kaspa Overview](about-kaspa/kaspa-overview/README.md)
-  * [DAG Consensus](about-kaspa/kaspa-overview/dag-consensus.md)
+  * [Phantom Consensus](about-kaspa/kaspa-overview/dag-consensus.md)
   * [Transaction & UTXO](about-kaspa/kaspa-overview/transaction.md)
   * [Blocks, DAG & PoW](about-kaspa/kaspa-overview/blocks-dag-and-pow.md)
   * [Block Acceptance](about-kaspa/kaspa-overview/block-acceptance.md)
