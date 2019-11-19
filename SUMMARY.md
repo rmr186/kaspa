@@ -50,12 +50,12 @@
 ## API Reference
 
 * [API Architecture](api-reference/untitled.md)
-* [API Server](api-reference/api-calls/README.md)
-  * [API Request Calls](api-reference/api-calls/api-server-requests-list.md)
-  * [API Response Types](api-reference/api-calls/api-server-response-types.md)
-  * [Database Schema](api-reference/api-calls/api-server-db-schema.md)
-  * [Internal Procedures](api-reference/api-calls/api-server-internal-procedures.md)
-  * [Run a Kaspa API Server](api-reference/api-calls/api-server-setup.md)
+* [API Server](api-reference/api-server/README.md)
+  * [API Request Calls](api-reference/api-server/api-server-requests-list.md)
+  * [API Response Types](api-reference/api-server/api-server-response-types.md)
+  * [Database Schema](api-reference/api-server/api-server-db-schema.md)
+  * [Internal Procedures](api-reference/api-server/api-server-internal-procedures.md)
+  * [Run a Kaspa API Server](api-reference/api-server/api-server-setup.md)
 * [JSON-RPC API Reference](api-reference/rpc-api-ref/README.md)
   * [Consensus Examples](api-reference/rpc-api-ref/consensus-examples.md)
   * [Mining Examples](api-reference/rpc-api-ref/mining-examples.md)
