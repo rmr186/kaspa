@@ -24,14 +24,14 @@
 
 ## Try Kaspa
 
-* [Overview](try-kaspa/overview.md)
-* [Run a Full Node](try-kaspa/running-a-node/README.md)
+* [Components](try-kaspa/components.md)
+* [Full Node](try-kaspa/running-a-node/README.md)
   * [Quick Start with Docker](try-kaspa/running-a-node/full-node-quick-setup-with-docker.md)
   * [Build from Source](try-kaspa/running-a-node/build-a-node-server-from-source-code.md)
-* [Interact with a Node](try-kaspa/interact-with-a-node/README.md)
-  * [CLI Commands](try-kaspa/interact-with-a-node/node-cli-interface.md)
-  * [JSON-RPC API](try-kaspa/interact-with-a-node/node-json-rpc-api.md)
-  * [Usage Examples](try-kaspa/interact-with-a-node/node-usage-examples.md)
+  * [Interact with a Node](try-kaspa/running-a-node/interact-with-a-node/README.md)
+    * [CLI Commands](try-kaspa/running-a-node/interact-with-a-node/node-cli-interface.md)
+    * [JSON-RPC API](try-kaspa/running-a-node/interact-with-a-node/node-json-rpc-api.md)
+    * [Usage Examples](try-kaspa/running-a-node/interact-with-a-node/node-usage-examples.md)
 * [API Server](try-kaspa/api-server/README.md)
   * [Quick Start with Docker](try-kaspa/api-server/api-server-setup-using-docker.md)
   * [Set Up from Source](try-kaspa/api-server/api-server-setup-from-source.md)

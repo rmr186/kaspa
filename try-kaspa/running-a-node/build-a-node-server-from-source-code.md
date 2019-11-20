@@ -111,7 +111,7 @@ The node connect to the network specified at launch, in this case `--devnet`.  T
 
 ### Next Steps
 
-At this point your node is active and you can interact with it directly via [CLI](../interact-with-a-node/node-cli-interface.md) or using [JSON-RPC API](../interact-with-a-node/node-json-rpc-api.md) calls described in the next section.
+At this point your node is active and you can interact with it directly via [CLI](interact-with-a-node/node-cli-interface.md) or using [JSON-RPC API](interact-with-a-node/node-json-rpc-api.md) calls described in the next section.
 
 
 

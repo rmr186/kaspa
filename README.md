@@ -18,7 +18,7 @@ This documentation site contains the following sections:
 
 * [About Kaspa](about-kaspa/kaspa-overview/) - information about the Kaspa components, protocols, features and use cases.
 * [Community](community/community-guide.md) - community hubs and guidelines.
-* [Try Kaspa](try-kaspa/overview.md) - guides for running a full node, an API server, a wallet and for mining.
+* [Try Kaspa](try-kaspa/components.md) - guides for running a full node, an API server, a wallet and for mining.
 * [References](api-reference/untitled.md) - user manuals, APIs, and developer documentation for the Kaspa components.
 
 

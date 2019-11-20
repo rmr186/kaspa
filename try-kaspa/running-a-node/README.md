@@ -2,13 +2,13 @@
 description: Setup and run a Kaspa full node.
 ---
 
-# Run a Full Node
+# Full Node
 
 ### What is a Kaspa Full Node?
 
 A full node is the basic participant in the Kaspa peer-to-peer network. It validates blocks and transactions on the network, publishes new transactions and queries network data.
 
-Kaspa's codebase is based on Bitcoin's Go implementation and you will need to setup [a Go development environment](https://app.gitbook.com/@kaspa/s/kaspa/~/drafts/-LsLyvtECTPlocs1u90J/primary/getting-started/running-a-node/build-a-node-server-from-source-code#prerequisites) to build and run Kaspa node, although you can interact with an existing node from any application using [JSON-RPC](../interact-with-a-node/node-json-rpc-api.md) channels.
+Kaspa's codebase is based on Bitcoin's Go implementation and you will need to setup [a Go development environment](https://app.gitbook.com/@kaspa/s/kaspa/~/drafts/-LsLyvtECTPlocs1u90J/primary/getting-started/running-a-node/build-a-node-server-from-source-code#prerequisites) to build and run Kaspa node, although you can interact with an existing node from any application using [JSON-RPC](interact-with-a-node/node-json-rpc-api.md) channels.
 
 Kaspa does not rely on trusted 3rd parties or centralized servers, relying instead entirely on its peer-to-peer network nodes.  
 
@@ -29,7 +29,7 @@ There are two ways to setup a Kaspa full node:
 
 ### Working with a full node
 
-After completing setup you can use either a [CLI commands](../interact-with-a-node/node-cli-interface.md) or [JSON-RPC](../interact-with-a-node/node-json-rpc-api.md) to interact with your node.
+After completing setup you can use either a [CLI commands](interact-with-a-node/node-cli-interface.md) or [JSON-RPC](interact-with-a-node/node-json-rpc-api.md) to interact with your node.
 
 
 

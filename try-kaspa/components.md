@@ -2,7 +2,7 @@
 description: Introduction to Kaspa Dev Net
 ---
 
-# Overview
+# Components
 
 ## Kaspa Components
 
@@ -21,11 +21,11 @@ The full nodes form the peer-to-peer Kaspa network and act as its connection poi
 
 ### Node CLI Client
 
-Set of bash commands for interacting with the full node.  After you have a full node running, use these instructions for [setting up and using the CLI Client](interact-with-a-node/node-cli-interface.md).
+Set of bash commands for interacting with the full node.  After you have a full node running, use these instructions for [setting up and using the CLI Client](running-a-node/interact-with-a-node/node-cli-interface.md).
 
 ### JSON-RPC API
 
-JSON-RPC calls for interacting with the node, used by mining applications, verifying, and publishing transactions.  Use these instructions for [using the JSON-RPC API](interact-with-a-node/node-json-rpc-api.md).
+JSON-RPC calls for interacting with the node, used by mining applications, verifying, and publishing transactions.  Use these instructions for [using the JSON-RPC API](running-a-node/interact-with-a-node/node-json-rpc-api.md).
 
 ### API Server
 

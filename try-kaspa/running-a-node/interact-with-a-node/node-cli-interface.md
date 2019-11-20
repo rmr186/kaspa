@@ -12,7 +12,7 @@ Once you have a full node running, you can use bash commands available inside th
 
 These commands are processed by the node's _**rpcserver**_ component, just like _**rpcclient**_ requests.
 
-1. Make sure you [have a running node](../running-a-node/) and connected to a Kaspa network.
+1. Make sure you [have a running node](../) and connected to a Kaspa network.
 2. Run the _**btcctl**_ client with the following network credentials:
 
 ```bash
@@ -21,7 +21,7 @@ go run . --rpcuser=user --rpcpass=pass --rpcserver=localhost:18334 --devnet --no
 
 ### Example successful command & reply
 
-![Running btcctl getInfo command on a local Devnet](../../.gitbook/assets/screenshot_2019-11-03_16-08-00.png)
+![Running btcctl getInfo command on a local Devnet](../../../.gitbook/assets/screenshot_2019-11-03_16-08-00.png)
 
 ### Note the following structure for CLI commands:
 
@@ -149,7 +149,7 @@ total 28
 
 ### Codebase Reference for CLI Commands
 
-For a complete reference  of CLI commands please see the [codebase reference for CLI commands](../../api-reference/code-ref/btcctl.md).
+For a complete reference  of CLI commands please see the [codebase reference for CLI commands](../../../api-reference/code-ref/btcctl.md).
 
 
 
