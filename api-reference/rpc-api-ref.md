@@ -1,4 +1,4 @@
-# JSON-RPC API Reference
+# JSON-RPC
 
 * Nodes
   * addManualNode

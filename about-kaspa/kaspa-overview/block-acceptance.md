@@ -1,2 +1,2 @@
-# Block Acceptance
+# UTXO and Pruning
 

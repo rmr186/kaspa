@@ -6,14 +6,14 @@
 
 * [Kaspa Overview](about-kaspa/kaspa-overview/README.md)
   * [Phantom Consensus](about-kaspa/kaspa-overview/dag-consensus.md)
-  * [Transaction & UTXO](about-kaspa/kaspa-overview/transaction.md)
-  * [Blocks, DAG & PoW](about-kaspa/kaspa-overview/blocks-dag-and-pow.md)
-  * [Block Acceptance](about-kaspa/kaspa-overview/block-acceptance.md)
-* [Kaspa Smart Contract Layer](about-kaspa/smart-contracts.md)
-* [Use Cases](about-kaspa/use-cases/README.md)
-  * [Stable Coin](about-kaspa/use-cases/stable-coin.md)
-  * [Decentralized VISA-like Credit](about-kaspa/use-cases/decentralized-visa-like-credit.md)
-* [Developer Incentives](about-kaspa/developer-incentives.md)
+  * [Transactions](about-kaspa/kaspa-overview/transaction.md)
+  * [Proof of Work](about-kaspa/kaspa-overview/blocks-dag-and-pow.md)
+  * [UTXO and Pruning](about-kaspa/kaspa-overview/block-acceptance.md)
+* [Kaspa Smart Contract Layer](about-kaspa/smart-contracts/README.md)
+  * [Use Cases](about-kaspa/smart-contracts/use-cases/README.md)
+    * [Stable Coin](about-kaspa/smart-contracts/use-cases/stable-coin.md)
+    * [Decentralized VISA-like Credit](about-kaspa/smart-contracts/use-cases/decentralized-visa-like-credit.md)
+  * [Developer Incentives](about-kaspa/smart-contracts/developer-incentives.md)
 
 ## Community
 
@@ -24,7 +24,7 @@
 
 ## Try Kaspa
 
-* [Components](try-kaspa/components.md)
+* [Components Overview](try-kaspa/components.md)
 * [Full Node](try-kaspa/running-a-node/README.md)
   * [Quick Start with Docker](try-kaspa/running-a-node/full-node-quick-setup-with-docker.md)
   * [Build from Source](try-kaspa/running-a-node/build-a-node-server-from-source-code.md)
@@ -32,6 +32,10 @@
     * [CLI Commands](try-kaspa/running-a-node/interact-with-a-node/node-cli-interface.md)
     * [JSON-RPC API](try-kaspa/running-a-node/interact-with-a-node/node-json-rpc-api.md)
     * [Usage Examples](try-kaspa/running-a-node/interact-with-a-node/node-usage-examples.md)
+* [Mining](try-kaspa/untitled-1/README.md)
+  * [How to Mine Kaspa](try-kaspa/untitled-1/how-to-mine-kaspa.md)
+  * [Optical Proof of Work](try-kaspa/untitled-1/optical-proof-of-work.md)
+  * [Mining Incentives](try-kaspa/untitled-1/mining-incentives.md)
 * [API Server](try-kaspa/api-server/README.md)
   * [Quick Start with Docker](try-kaspa/api-server/api-server-setup-using-docker.md)
   * [Set Up from Source](try-kaspa/api-server/api-server-setup-from-source.md)
@@ -39,13 +43,6 @@
 * [CLI Wallet](try-kaspa/untitled.md)
 * [Web Wallet](try-kaspa/web-wallet.md)
 * [Block Explorer](try-kaspa/block-explorer.md)
-
-## Mining Kaspa <a id="mining"></a>
-
-* [Introduction to Mining](mining/untitled.md)
-* [Optical Proof of Work](mining/optical-proof-of-work.md)
-* [How to Mine Kaspa](mining/how-to-mine-kaspa.md)
-* [Mining Incentives](mining/mining-incentives.md)
 
 ## API Reference
 
@@ -56,10 +53,9 @@
   * [Database Schema](api-reference/api-server/api-server-db-schema.md)
   * [Internal Procedures](api-reference/api-server/api-server-internal-procedures.md)
   * [Run a Kaspa API Server](api-reference/api-server/api-server-setup.md)
-* [JSON-RPC API Reference](api-reference/rpc-api-ref/README.md)
-  * [Consensus Examples](api-reference/rpc-api-ref/consensus-examples.md)
-  * [Mining Examples](api-reference/rpc-api-ref/mining-examples.md)
-* [Codebase Reference](api-reference/code-ref/README.md)
+* [JSON-RPC](api-reference/rpc-api-ref.md)
+* [CLI](api-reference/cli.md)
+* [KSPd Code Reference](api-reference/code-ref/README.md)
   * [btcd](api-reference/code-ref/btcd.md)
   * [cmd](api-reference/code-ref/cmd.md)
   * [btcctl](api-reference/code-ref/btcctl.md)

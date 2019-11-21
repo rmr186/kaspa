@@ -6,6 +6,8 @@
 
 #### What is a Distributed System?
 
+* [ ] Finish explaining about [distributed systems](https://medium.com/s/story/lets-take-a-crack-at-understanding-distributed-consensus-dad23d0dc95) and distributed consensus
+
 A distributed system is a system in which participants, who are geographically separate one from the other, coordinate by passing messages one between the other in order to achieve a common objective.
 
 Three significant characteristics of distributed systems are:
@@ -28,6 +30,10 @@ Independent failure of components means that different participants may fail, no
 
 ### Differences of BlockDAG over Blockchain
 
+* [ ] What is a DAG?
+* [ ] Explain incentive for using wide DAG rather than a DAG of one chain.
+* [ ] What's the new challenge of achieving consensus in a DAG?
+
 Phantom consensus is a generalization of Nakamoto consensus, where instead of a chain of blocks, the ledger consists of a directional acyclic graph of blocks. Instead of pointing to one previous block as in the blockchain, in a blockDAG each block points to all previous recent blocks; formally, these are the tips of the blockDAG that the mining node observed locally at the time it created the new block.
 
 ![Directional Acyclic Graph - The BlockDAG](https://lh6.googleusercontent.com/W-v03qdqQp_1rQsHFz00A5p14z3Bklo3Ag09-a16aJNlXXpbOOEzhCdpTtnhROEO_A9e1TDghXRhTD21wVt4oO9lUhfezsGt6F8NQXSwzmWL-bvwvuMPEp4iPX5zn1U1CwFjHhwT)
@@ -35,6 +41,9 @@ Phantom consensus is a generalization of Nakamoto consensus, where instead of a 
 Unlike a blockchain which preserves consistency by construction \(every block in the chain adds transactions that are consistent with its predecessors in the chain\), a blockDAG incorporates blocks from different “branches” and so may contain conflicting transactions. We therefore need a method to recover consistency; in other words, a blockDAG system requires replacing Satoshi’s longest chain rule with a new consensus protocol.
 
 ### **Phantom - The New Consensus Kid on the Block**
+
+* [ ] What is Phantom?
+* [ ] How does Phantom achieve consensus in a DAG?
 
 The natural topology of a DAG already induces a partial ordering over the blocks: if there is a path from block X to block Y in the DAG, then block Y was provably created before block X and so should precede X in the global order. Thus, we only need to define an order over blocks created in parallel, i.e. any set of blocks such that there is no path that connects them.
 

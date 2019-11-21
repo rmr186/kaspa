@@ -16,7 +16,7 @@ Kaspa uses [Phantom](https://eprint.iacr.org/2018/104.pdf), a highly scalable an
 
 Kaspa uses optical proof of work \(OPoW\) - an implementation of traditional proof of work \(PoW\) with photonic optical processors rather than silicone processors. OPoW retains the same security properties of traditional PoW, and because photonic processors are more energy efficient and green, allows for more sustainable and geographically decentralizing mining. OPoW, coupled with the rapid block creation rate of the blockDAG, means it is much more likely for miners to find blocks, and makes Kaspa mining rewards fair game.
 
-Kaspa enables a[ smart contract](../smart-contracts.md) computation layer, inspired by [Arbitrum](https://www.usenix.org/node/217514) and [TrueBit](https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf), and decoupled from the consensus layer, allowing the native currency to remain lightweight and scalable, while supporting and enhancing upper-layer use cases, such as stable tokens and decentralized credit systems.
+Kaspa enables a[ smart contract](../smart-contracts/) computation layer, inspired by [Arbitrum](https://www.usenix.org/node/217514) and [TrueBit](https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf), and decoupled from the consensus layer, allowing the native currency to remain lightweight and scalable, while supporting and enhancing upper-layer use cases, such as stable tokens and decentralized credit systems.
 
 All the basic components needed for running a p2p transaction ledger are available in the Kaspa Core Repo on [Github](https://github.com/daglabs). Mainly these can be categorized as follows:
 

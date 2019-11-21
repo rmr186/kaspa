@@ -1,2 +1,2 @@
-# Blocks, DAG & PoW
+# Proof of Work
 

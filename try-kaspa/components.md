@@ -2,7 +2,7 @@
 description: Introduction to Kaspa Dev Net
 ---
 
-# Components
+# Components Overview
 
 ## Kaspa Components
 
