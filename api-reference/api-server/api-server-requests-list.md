@@ -35,7 +35,7 @@ Example:
 
 {% api-method method="get" host="https://api.kas.pa" path="/dev/v1/transaction/id/{txid}" %}
 {% api-method-summary %}
-/transaction/id
+/transaction/id/ {txid}
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -146,7 +146,7 @@ The response is a single transaction object.
 
 {% api-method method="get" host="https://api.kas.pa" path="/dev/v1/transaction/hash/{txhash}" %}
 {% api-method-summary %}
-/transaction/hash
+/transaction/hash/ {txhash}
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -257,7 +257,7 @@ The response is a single transaction object.
 
 {% api-method method="get" host="https://api.kas.pa" path="/dev/v1/transactions/address/{address}\[&skip=txid&limit=100\]" %}
 {% api-method-summary %}
-/transactions/address
+/transactions/address/ {address}
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -431,7 +431,7 @@ The response is an array of transaction objects. In the following example, the a
 
 {% api-method method="get" host="https://api.kas.pa" path="/dev/v1/utxos/{address}" %}
 {% api-method-summary %}
-/utxos
+/utxos/ {address}
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -524,7 +524,7 @@ The response is an array of transactionOutput objects. In the following example 
 
 {% api-method method="get" host="https://api.kas.pa" path="/dev/v1/block/{hash}" %}
 {% api-method-summary %}
-/block
+/block/ {hash}
 {% endapi-method-summary %}
 
 {% api-method-description %}
