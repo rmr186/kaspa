@@ -4,7 +4,8 @@ The API Server connects to the Kaspa BlockDAG network by connecting to a Kaspa f
 
 ### Prerequisites
 
-* Setup Go runtime, and Git onto the machine you want to use. 
+* Go runtime
+* Git
 * Clone the Kaspa open source code from [https://github.com/daglabs/api-server](https://github.com/daglabs/api-server).
 * Install this pre-configured MySQL Docket container.
 * [Start a Kaspa Full Node & Connect to DevNet]()
