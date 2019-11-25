@@ -11,8 +11,7 @@ description: List of API request calls
 
 This page lists the calls that can be requested from the API.
 
-All API calls return 200 OK if no error was encountered.
-
+All API calls return 200 OK if no error was encountered.  
 If an error occurs, an error code is returned with the following body:
 
 ```go
@@ -30,6 +29,8 @@ Example:
     "errorMessage":"No transaction was found for the given address."
 }
 ```
+
+In addition, some calls return objects. The object types are listed [here](api-server-response-types.md).
 
 ## List of API Calls
 
