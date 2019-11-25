@@ -431,7 +431,7 @@ The response is an array of transaction objects. In the following example, the a
 
 {% api-method method="get" host="https://api.kas.pa" path="/dev/v1/utxos/{address}" %}
 {% api-method-summary %}
-/utxos/ {address}
+/utxos/address/ {address}
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -752,14 +752,14 @@ The response is a feeEstimates object.
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This method takes a Base64-encoded rawTransaction data as input, and sends it to a node for execution.
+This method takes a Hex-encoded rawTransaction data as input, and sends it to a node for execution.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="rawTransaction" type="string" required=true %}
-Base64-encoded raw transaction data
+Hex-encoded raw transaction data
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
