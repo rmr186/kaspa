@@ -256,14 +256,18 @@ The response is a single transaction object.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api.kas.pa" path="/dev/v1/transactions/address/{address}\[&skip=txid&limit=100\]" %}
+{% api-method method="get" host="https://api.kas.pa" path="/dev/v1/transactions/address/{address}\[&skip=5000&limit=1000\]" %}
 {% api-method-summary %}
 /transactions/address/ {address}
 {% endapi-method-summary %}
 
 {% api-method-description %}
 Searches for all transactions where the given address is either an input or an output.    
-Returns: Array of Transaction, sorted by accepting block date in ascending order \(earliest tx first\).
+Returns: Array of Transaction, sorted by API Server Transaction ID, which is sorted according to accepting block date in ascending order, which is almost according to transaction date in ascending order, earliest transaction first. \(The reason it is almost but not exactly chronological order stems from the high block creation rate of the DAG. If two blocks are created in parallel in two different parts of the DAG, it is hard to say which one came first, because of the lack of global clock.\)  
+Accepts optional limit and skip parameters.  
+  -  limit \(default=100\) allows limiting the number of returned transactions between 1 and 1000.  
+  -  skip \(default=0\) allows to skip a given number of transactions.  
+If there are no transactions for the given address, returns an empty array.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -278,7 +282,7 @@ If provided, skips the first given number of transactions, ordered by ID \(defau
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-If provided, limits the response to the given number of  transactions \(default 100, max 1000\). If more than 1000 is specified, returns an error.
+If provided, limits the response to the given number of  transactions \(default 100, max 1000\). If more than 1000 or less than 1 is specified, returns an error.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -377,26 +381,13 @@ The response is an array of transaction objects. In the following example, the a
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-
+If specifying a limit, then 1 &lt;= limit &lt;= 1000
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
     "errorCode":400
-    "errorMessage":"Limit higher than 1000 or lower than 0 was requested."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "errorCode":404
-    "errorMessage":"No transactions for the given address was found."
+    "errorMessage":"Limit higher than 1000 or lower than 1 was requested."
 }
 ```
 {% endapi-method-response-example %}
@@ -437,7 +428,8 @@ The response is an array of transaction objects. In the following example, the a
 
 {% api-method-description %}
 Searches for all unspent transaction outputs for the given address.  
-Response: Array of TransactionOutput, omitting the address field.
+Response: Array of TransactionOutput, omitting the address field.  
+If there are no UTXOs for the given address, returns an empty array.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -478,19 +470,6 @@ The response is an array of transactionOutput objects. In the following example 
         "isSpendable":
     }
 ]
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "errorCode":404
-    "errorMessage":"No UTXOs were found for the given address."
-}
 ```
 {% endapi-method-response-example %}
 
