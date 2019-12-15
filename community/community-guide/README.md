@@ -16,5 +16,9 @@ The website and the whitepaper will be up soon.
 
 ## GitHub Code Repository
 
-The project's code repository will become public soon.
+The project's code repository is on GitHub at [github.com/kaspanet](https://github.com/kaspanet)
+
+## Project Documentation
+
+The project's documentation is on GitBook at [docs.kas.pa](https://docs.kas.pa) and on GitHub at [github.com/kaspanet](https://github.com/kaspanet)
 

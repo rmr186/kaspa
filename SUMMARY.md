@@ -17,10 +17,10 @@
 
 ## Community
 
-* [Community Guide](community/community-guide.md)
-* [Kaspa Open Source](community/kaspa-open-source.md)
-* [Contribution Guidelines](community/contribution-guidelines.md)
-* [Reporting Vulnerabilities](community/reporting-vulnerabilities.md)
+* [Kaspa Social Contract](community/kaspa-open-source.md)
+* [Community Guide](community/community-guide/README.md)
+  * [Contribution Guidelines](community/community-guide/contribution-guidelines.md)
+  * [Reporting Vulnerabilities](community/community-guide/reporting-vulnerabilities.md)
 
 ## Try Kaspa
 
