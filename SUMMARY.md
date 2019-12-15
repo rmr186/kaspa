@@ -53,7 +53,8 @@
   * [API Response Types](api-reference/api-server/api-server-response-types.md)
   * [Database Schema](api-reference/api-server/api-server-db-schema.md)
   * [Internal Procedures](api-reference/api-server/api-server-internal-procedures.md)
-* [JSON-RPC](api-reference/rpc-api-ref.md)
+* [JSON-RPC](api-reference/rpc-api-ref/README.md)
+  * [RPC Commands](api-reference/rpc-api-ref/rpc-commands.md)
 * [CLI](api-reference/cli.md)
 * [KSPd Code Reference](api-reference/code-ref/README.md)
   * [btcd](api-reference/code-ref/btcd.md)
@@ -87,5 +88,7 @@
   * [subnetworkid](api-reference/code-ref/subnetworkid.md)
   * [testtools](api-reference/code-ref/testtools.md)
   * [txsort](api-reference/code-ref/txsort.md)
-* [Glossary of Terms](glossary-of-terms.md)
+* [Glossary of Terms](glossary-of-terms/README.md)
+  * [Differences from Bitcoin](glossary-of-terms/differences-from-bitcoin.md)
+  * [Concepts](glossary-of-terms/concepts.md)
 

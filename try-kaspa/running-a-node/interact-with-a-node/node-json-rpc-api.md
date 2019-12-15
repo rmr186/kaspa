@@ -24,7 +24,7 @@ $ ./btcd --devnet --rpclisten=localhost:18334 --rpcuser=user --rpcpass=pass --no
 
 ### JSON-RPC API Reference
 
-For a list of available API requests and their format please see the [JSON-RPC API Refrence](../../../api-reference/rpc-api-ref.md).
+For a list of available API requests and their format please see the [JSON-RPC API Refrence](../../../api-reference/rpc-api-ref/).
 
 
 
