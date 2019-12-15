@@ -6,7 +6,7 @@ description: Setup and run a Kaspa full node.
 
 ### What is a Kaspa Full Node?
 
-A full node is the basic participant in the Kaspa peer-to-peer network. It validates blocks and transactions on the network, publishes new transactions and queries network data.
+A full node is the basic participant in the Kaspa network. The network relies on these nodes to connect to each other, thus forming a peer-to-peer network of nodes that maintains the distributed ledger. A node receives blocks and transactions from its peer nodes, validates them, and spreads them across the network. A node also mines.
 
 Kaspa's codebase is based on Bitcoin's Go implementation and you will need to setup [a Go development environment](https://app.gitbook.com/@kaspa/s/kaspa/~/drafts/-LsLyvtECTPlocs1u90J/primary/getting-started/running-a-node/build-a-node-server-from-source-code#prerequisites) to build and run Kaspa node, although you can interact with an existing node from any application using [JSON-RPC](interact-with-a-node/node-json-rpc-api.md) channels.
 

@@ -36,7 +36,7 @@
   * [How to Mine Kaspa](try-kaspa/untitled-1/how-to-mine-kaspa.md)
   * [Optical Proof of Work](try-kaspa/untitled-1/optical-proof-of-work.md)
   * [Mining Incentives](try-kaspa/untitled-1/mining-incentives.md)
-* [API Server](try-kaspa/api-server/README.md)
+* [Kasparov API Server](try-kaspa/api-server/README.md)
   * [Quick Start with Docker](try-kaspa/api-server/api-server-setup-using-docker.md)
   * [Set Up from Source](try-kaspa/api-server/api-server-setup-from-source.md)
   * [Run a Kaspa API Server](try-kaspa/api-server/api-server-setup.md)
@@ -47,8 +47,8 @@
 
 ## API Reference
 
-* [API Architecture](api-reference/untitled.md)
-* [API Server](api-reference/api-server/README.md)
+* [API Architecture](api-reference/api-architecture.md)
+* [Kasparov API Server](api-reference/api-server/README.md)
   * [API Request Calls](api-reference/api-server/api-server-requests-list.md)
   * [API Response Types](api-reference/api-server/api-server-response-types.md)
   * [Database Schema](api-reference/api-server/api-server-db-schema.md)

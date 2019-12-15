@@ -2,7 +2,7 @@
 description: A RESTful API for interacting with the Kaspa network
 ---
 
-# API Server
+# Kasparov API Server
 
 The API Server is a programmatic interface for interacting with the Kaspa network. The Kaspa network is an inter-connected web of Kapsa full nodes, working together to maintain the distributed ledger. The API Server connects to one of the Kaspa full node, and exposes a list of RESTful API endpoints, that allow clients, such as wallets and block explorer, connected to the API Server, to send requests and receive notifications from the Kaspa network. The API allows things like sending a transaction, getting an address balance, listening for updates, and querying for blocks and transactions.
 
