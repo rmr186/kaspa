@@ -2,13 +2,15 @@
 
 ## Kaspa P2P Network
 
-The Kaspa network is a peer-to-peer \(P2P\) inter-connected web of nodes, working together to maintain the distributed Kaspa ledger.
+The Kaspa network is a peer-to-peer \(P2P\) web of inter-connected nodes, working together to maintain the distributed Kaspa ledger.
 
-* [ ] TODO: picture
+![The Kaspa network - a web of inter-connected nodes](../.gitbook/assets/2.jpg)
+
+* [ ] TODO: better picture
 
 ### A Kaspa Node
 
-A Kaspa node is a single participant in the Kaspa network. Each Kaspa node connects to a small subset of all the other nodes in the network and maintains connectivity. Nodes perform many kinds of operations, the important ones are data exchange, data validation, and mining.
+A Kaspa node is a single participant in the Kaspa network. Each Kaspa node connects to a small subset of all the other nodes in the network. Nodes perform many kinds of operations, the most important operations are data exchange, data validation, and mining.
 
 #### Data Exchange
 
@@ -20,7 +22,7 @@ The Kaspa network implements the Kaspa social contract - a set of rules agreed u
 
 #### Mining
 
-Each node is also capable of mining Kaspa, or in other words, expending computational resources for a chance to find a new block and the reward, in the form of Kaspa coins, that comes with it. Mining is not mandatory, but optional.
+Each node is also capable of mining Kaspa, or in other words, expending computational resources for a chance to find a new block and its attached reward of Kaspa coins. Mining is not mandatory, but optional.
 
 JSON-RPC
 
