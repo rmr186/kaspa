@@ -149,7 +149,7 @@ total 28
 
 ### Codebase Reference for CLI Commands
 
-For a complete reference  of CLI commands please see the [codebase reference for CLI commands](../../../api-reference/code-ref/btcctl.md).
+For a complete reference  of CLI commands please see the [codebase reference for CLI commands](../../../reference/kaspa-full-node/code-ref/btcctl.md).
 
 
 

@@ -32,27 +32,3 @@ Proof-of-Work
 
 Optical Proof-of-Work
 
-## Current Status
-
-## Community Plan
-
-### Smart Contract Layer
-
-Sharding and Silos
-
-Security Model
-
-Staking
-
-Link to design
-
-Medium of Exchange Silo
-
-### Rich Web of Trust Layer
-
-## Licenses
-
-Kaspa is an open source project, using the [ICS license](https://en.wikipedia.org/wiki/ISC_license).
-
-## 
-

@@ -12,7 +12,7 @@ If you are a developer building an application such as a wallet or a block explo
 * You may run your own Kasparov API Server. There is a Docker image that you can run to [install Kasparov with all its dependencies](../../try-kaspa/api-server/api-server-setup-using-docker.md). Alternatively, you can setup everything independently.
 
 {% hint style="info" %}
-If you want to make JSON-RPC API calls using any authenticated JSON-RPC client without running a dedicated serer please check out[ the JSON-RPC API reference](../rpc-api-ref/).  
+If you want to make JSON-RPC API calls using any authenticated JSON-RPC client without running a dedicated serer please check out[ the JSON-RPC API reference](../kaspa-full-node/rpc-api/).  
 {% endhint %}
 
 ## 

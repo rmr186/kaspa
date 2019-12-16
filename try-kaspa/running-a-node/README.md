@@ -2,7 +2,7 @@
 description: Setup and run a Kaspa full node.
 ---
 
-# Full Node
+# Kaspa Full Node
 
 ### What is a Kaspa Full Node?
 

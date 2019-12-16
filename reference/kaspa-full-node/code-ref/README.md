@@ -1,4 +1,4 @@
-# KSPd Code Reference
+# Kaspad Code Reference
 
 The following are the important packages used in Kaspa's Go implementation:
 
