@@ -1,5 +1,7 @@
 # MQTT Topics
 
+
+
 ## List of MQTT Topics
 
 * [ ] Explanation what this is for

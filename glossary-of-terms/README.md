@@ -45,6 +45,10 @@ A digital ledger is a digital file, or collection of files, or a database storin
 
 The distributed ledger is a digital ledger spread across several nodes \(devices\) on a peer-to-peer network, where each replicates and saves an identical copy of the ledger and updates itself independently, without a central authority. When a ledger update happens, each node constructs the new transaction, and then the nodes vote by a consensus protocol on which copy is correct. Once a consensus has been reached, all the other nodes update themselves with the new, correct copy of the ledger.
 
+## **Sound Money**
+
+Sound money is money that is not prone to sudden appreciation or depreciation in purchasing power over the long term, aided by self-correcting mechanisms inherent in a free-market system. The foregoing definition presents several implications about how we view sound money and how we should approach money in general.
+
 ## **Consensus Protocol**
 
 ## **Bitcoin**
