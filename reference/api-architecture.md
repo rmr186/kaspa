@@ -1,14 +1,12 @@
-# API Architecture
+# Components
 
 ## Kaspa P2P Network
 
-The Kaspa network is a peer-to-peer \(P2P\) web of inter-connected nodes, working together to maintain the distributed Kaspa ledger.
-
-![The Kaspa network - a web of inter-connected nodes](../.gitbook/assets/2.jpg)
-
-* [ ] TODO: better picture
+The Kaspa network is a P2P web of inter-connected nodes, working together to maintain the distributed Kaspa ledger.
 
 ### A Kaspa Node
+
+If you already know how a Bitcoin node works, you can skip this part.
 
 A Kaspa node is a single participant in the Kaspa network. Each Kaspa node connects to a small subset of all the other nodes in the network. Nodes perform many kinds of operations, the most important operations are data exchange, data validation, and mining.
 

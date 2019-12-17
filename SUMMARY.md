@@ -47,12 +47,10 @@
   * [Run a Kaspa API Server](try-kaspa/api-server/api-server-setup.md)
   * [Usage Examples](try-kaspa/api-server/api-server-usage-examples.md)
 * [CLI Wallet](try-kaspa/untitled.md)
-* [Web Wallet](try-kaspa/web-wallet.md)
-* [Block Explorer](try-kaspa/block-explorer.md)
 
 ## Developers Reference <a id="reference"></a>
 
-* [API Architecture](reference/api-architecture.md)
+* [Components](reference/api-architecture.md)
 * [Kaspa Full Node](reference/kaspa-full-node/README.md)
   * [Node JSON-RPC](reference/kaspa-full-node/rpc-api/README.md)
     * [RPC Commands](reference/kaspa-full-node/rpc-api/rpc-commands.md)
