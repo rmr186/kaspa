@@ -37,59 +37,37 @@ To act as a store of value, a money must be able to be reliably saved, stored, a
 
 An increase in the quantity of money, leading to a decline in the value of existing money, and thus to an increase in the general level of prices or in the cost of living. In government controlled money, inflation can occur when the central bank prints more money, causing an increase in the quantity of money.
 
-## **Bitcoin**
+## **Distributed Ledger**
 
-That's a tough question but thankfully, our team is on it. Please bear with us while we're investigating.
+Stemming from the verb _"to lay"_, a ledger was originally a book laying regularly in one place, openly accessible, in which transactions, measured in a unit of account were permanently recorded by date.
+
+A digital ledger is a digital file, or collection of files, or a database storing these records.
+
+The distributed ledger is a digital ledger spread across several nodes \(devices\) on a peer-to-peer network, where each replicates and saves an identical copy of the ledger and updates itself independently, without a central authority. When a ledger update happens, each node constructs the new transaction, and then the nodes vote by a consensus protocol on which copy is correct. Once a consensus has been reached, all the other nodes update themselves with the new, correct copy of the ledger.
 
 ## **Consensus Protocol**
 
-Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I'm afraid we are not able to provide the answer at this point.
+## **Bitcoin**
 
-## **Distributed Ledger**
-
-A ledger is a file in which transactions measured in unit of account are recorded.
-
-## **Blockchain**
-
-
+## Blockchain
 
 ## **Kaspa**
 
 ## **Digital Currency**
 
+## Consensus Stack
 
-
-## **Consensus Stack**
-
-
-
-## **Store of Value**
-
-
-
-## **Ethereum**
-
-
+## Ethereum
 
 ## **Smart Contracts**
 
-
-
 ## **Turing Complete**
-
-
 
 ## **Non-Turing Complete** 
 
-
-
 ## **Bitcoin Script**
 
-
-
 ## **Proof of Work \(PoW\)**
-
-
 
 ## Optical Proof of Work \(OPoW\)
 
@@ -98,8 +76,6 @@ A ledger is a file in which transactions measured in unit of account are recorde
 ## Spent Transaction Output
 
 ## Unspent Transaction Output
-
-
 
 ## Directed Acyclic Graph \(DAG\)
 
