@@ -8,20 +8,16 @@ Kaspa is solving the shortcomings of existing cryptocurrency projects. Bitcoin i
 
 Kaspa's core principles are:
 
-* High throughput [Phantom](https://eprint.iacr.org/2018/104.pdf) consensus layer, supporting one block per second and near-immediate transaction confirmations.
-* Optical-proof-of-work, enabling [Bitcoin](https://bitcoin.org/bitcoin.pdf)-inspired security properties, and geographically decentralized and sustainable mining and fair participation rewards.
-* Decoupling of verification from mining keeping native currency lightweight, while supporting and enhancing upper-layer use cases, using EVM-inspired smart contracts without bloating the base layer.
+* High throughput [Phantom ghostDAG](https://eprint.iacr.org/2018/104.pdf) consensus layer, supporting one block per second and near-immediate transaction confirmations.
+* Optical-proof-of-work, with [Bitcoin](https://bitcoin.org/bitcoin.pdf)-inspired security properties, and geographically decentralized, sustainable, and fair-reward mining.
+* EVM-inspired smart contracts without bloating the base layer, by decoupling verification from mining, keeping native currency lightweight, while supporting and enhancing upper-layer use cases.
 * Open source, Bitcoin-inspired, decentralized community-governed project, called the Kaspa Initiative.
 * Transparent monetary policy.
 
 This documentation site contains the following sections:
 
 * [About Kaspa](about-kaspa/kaspa-overview/) - information about the Kaspa components, protocols, features and use cases.
-* [Community](community/community-guide/) - community hubs and guidelines.
-* [Try Kaspa](try-kaspa/components.md) - guides for running a full node, an API server, a wallet and for mining.
+* [Community](community/community-guide/) - community hubs, projects and guidelines.
+* [Try Kaspa](try-kaspa/components.md) - guides for running a full node, an API server, and a miner.
 * [References](reference/api-architecture.md) - user manuals, APIs, and developer documentation for the Kaspa components.
-
-
-
-
 
