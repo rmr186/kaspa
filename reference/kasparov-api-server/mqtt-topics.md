@@ -1,6 +1,8 @@
 # MQTT Topics
 
+Message Queuing Telemetry Transport \([MQTT](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html)\) is a lightweight publish/subscribe \(pub/sub\) messaging protocol designed for machine to machine \(M2M\) telemetry in low bandwidth environments. originally designed by Andy Stanford-Clark \(IBM\) and Arlen Nipper in 1999 for connecting Oil Pipeline telemetry systems over satellite.
 
+You may use any MQTT broker that supports MQTT version 3, such as RabbitMQ.
 
 ## List of MQTT Topics
 

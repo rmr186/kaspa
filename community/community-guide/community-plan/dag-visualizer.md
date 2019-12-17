@@ -1,5 +1,5 @@
 ---
-description: Community project requirements
+description: A call for a community project
 ---
 
 # DAG Visualizer
@@ -14,7 +14,7 @@ The DAG Visualizer will come in handy for testing simulations and for helping ne
 
 ### Challenges
 
-Avoiding overburdening the user interface with drawing too many objects \(blocks and links\) when the DAG grows.
+Avoiding overburdening the user interface with drawing too many objects \(blocks and links\) when the DAG grows, removing them from the UI, but allowing to quickly redraw them at the user's will.
 
 ### Getting Started
 
