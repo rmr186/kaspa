@@ -47,6 +47,7 @@
   * [Run a Kaspa API Server](try-kaspa/api-server/api-server-setup.md)
   * [Usage Examples](try-kaspa/api-server/api-server-usage-examples.md)
 * [CLI Wallet](try-kaspa/untitled.md)
+* [Faucet](try-kaspa/faucet.md)
 
 ## Developers Reference <a id="reference"></a>
 

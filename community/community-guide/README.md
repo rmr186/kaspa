@@ -2,7 +2,7 @@
 
 ## Community Chat
 
-The Kaspa research and development community hangs out on Discord. Use this public invite link to join: [https://discord.gg/k8TKcHr](https://discord.gg/k8TKcHr)
+The Kaspa research and development community hangs out on Discord. Use this public invite link to join: [https://discord.gg/k8TKcHr](https://discord.gg/WmGhhzk)
 
 Please take a moment to introduce yourself in the [\#introductions](https://discord.gg/W5NXCVB) channel
 
