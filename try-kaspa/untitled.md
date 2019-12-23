@@ -6,8 +6,6 @@ The CLI Wallet creates a wallet \(private-public key pair\) on the local machine
 
 ## Installing the CLI Wallet
 
-
-
 ## Creating a New Wallet
 
 To create a new wallet, enter the command `wallet create`, with no input:
@@ -67,13 +65,8 @@ Error 403: Access denied.
 
 Possible errors:
 
-* Error 400: Bad Request - cannot parse to\_address.
-* Error 400: Bad Request - cannot parse send\_amount.
-* Error 400: Bad Request - insufficient funds.
-* Error 401: Unauthorized - you are not authorized to use this server.
-* Error 404: Unreachable - a Kasparov API Server was not found at this address.
-* Error 500: Internal Server Error - Kasparov API Server reported an error. Code: &lt;server\_error\_code&gt;
-* Error 504: Gateway Timeout - The Kaspa network is unreachable.
+* Error 422: Unprocessable Entity - &lt;forwarded error from the Kaspa node&gt;
+* Error 500: Internal Server Error - &lt;forwarded error from the API Server&gt;
 
 ## Receiving Funds
 
