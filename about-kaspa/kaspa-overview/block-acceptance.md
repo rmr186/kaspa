@@ -1,2 +1,2 @@
-# UTXO and Pruning
+# Pruning
 

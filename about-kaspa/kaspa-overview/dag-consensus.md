@@ -40,7 +40,7 @@ Phantom consensus is a generalization of Nakamoto consensus, where instead of a 
 
 Unlike a blockchain which preserves consistency by construction \(every block in the chain adds transactions that are consistent with its predecessors in the chain\), a blockDAG incorporates blocks from different “branches” and so may contain conflicting transactions. We therefore need a method to recover consistency; in other words, a blockDAG system requires replacing Satoshi’s longest chain rule with a new consensus protocol.
 
-### **Phantom - The New Consensus Kid on the Block**
+### **Phantom GhostDAG - the New Consensus Kid on the Block**
 
 * [ ] What is Phantom?
 * [ ] How does Phantom achieve consensus in a DAG?

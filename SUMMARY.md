@@ -6,9 +6,9 @@
 
 * [Kaspa Overview](about-kaspa/kaspa-overview/README.md)
   * [Phantom Consensus](about-kaspa/kaspa-overview/dag-consensus.md)
-  * [Transactions](about-kaspa/kaspa-overview/transaction.md)
+  * [Kaspa Transactions](about-kaspa/kaspa-overview/transaction.md)
   * [Proof of Work](about-kaspa/kaspa-overview/blocks-dag-and-pow.md)
-  * [UTXO and Pruning](about-kaspa/kaspa-overview/block-acceptance.md)
+  * [Pruning](about-kaspa/kaspa-overview/block-acceptance.md)
 * [Kaspa Smart Contract Layer](about-kaspa/smart-contracts/README.md)
   * [Use Cases](about-kaspa/smart-contracts/use-cases/README.md)
     * [Stable Coin](about-kaspa/smart-contracts/use-cases/stable-coin.md)
