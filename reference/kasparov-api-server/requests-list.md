@@ -754,6 +754,32 @@ Hex-encoded raw transaction data
 
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=422 %}
+{% api-method-response-example-description %}
+Node returned an error while processing the transaction.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "errorCode":422
+    "errorMessage":"<Forwarded error from the node>"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "errorCode":500
+    "errorMessage":"A server error occurred."
+}
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}

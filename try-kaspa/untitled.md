@@ -6,11 +6,9 @@ The CLI Wallet creates a wallet \(private-public key pair\) on the local machine
 
 ## Installing the CLI Wallet
 
-
-
 ## Creating a New Wallet
 
-To create a new wallet, enter the command `wallet create`, with no input:
+To create a new wallet, enter the command `wallet create`, with no input arguments:
 
 ```
 $ wallet create
@@ -30,14 +28,14 @@ Public Address (MainNet): kaspa:pr6m7j9njldwwzlg9v7v53unlr4jkmx6ey65nvtks5
 
 ## Checking the Balance
 
-To check the balance of an address, enter the command `wallet balance` with the following input parameters:
+To check the balance of an address, enter the command `wallet balance` with the following input arguments:
 
 * `address` - the public address to return the balance of.
-* `api_address` - the address of the Kasparov API Server to use for relaying the balance request to the network.
+* `api_address` - the address of the Kasparov API Server to use for relaying the balance request to the network. Must include https:// \(e.g. [https://api.kas.pa](http://api.kas.pa)\).
 
 ```text
 $ wallet balance --address=kaspatest:pr6m7j9njldwwzlg9v7v53unlr4jkmx6eyvwc0uz5t
-                 --api_address=api.kas.pa
+                 --kasparov_address=https://kasparov.kas.pa
 ```
 
 {% hint style="success" %}
@@ -46,8 +44,9 @@ The CLI Wallet will send a balance request on the input address, relayed through
 
 ```text
 $ wallet balance --address=kaspatest:pr6m7j9njldwwzlg9v7v53unlr4jkmx6eyvwc0uz5t
-                 --api_address=api.kas.pa
-Balance: KAS 0.123456789
+                 --kasparov_address=https://kasparov.kas.pa
+Balance:                  KAS 1234.12345678
+Pending Balance:          KAS   12.12345678
 ```
 
 {% hint style="info" %}
@@ -61,70 +60,128 @@ In case of an error, the error code and message received from Kasparov API Serve
 
 ```text
 $ wallet balance --address=kaspatest:pr6m7j9njldwwzlg9v7v53unlr4jkmx6eyvwc0uz5t
-                 --api_address=api.kas.pa
+                 --kasparov_address=https://kasparov.kas.pa
 Error 403: Access denied.
 ```
 
 Possible errors:
 
-* Error 400: Bad Request - cannot parse to\_address.
-* Error 400: Bad Request - cannot parse send\_amount.
-* Error 400: Bad Request - insufficient funds.
-* Error 401: Unauthorized - you are not authorized to use this server.
-* Error 404: Unreachable - a Kasparov API Server was not found at this address.
-* Error 500: Internal Server Error - Kasparov API Server reported an error. Code: &lt;server\_error\_code&gt;
-* Error 504: Gateway Timeout - The Kaspa network is unreachable.
+* Error 422: Unprocessable Entity - &lt;forwarded error from the Kaspa node&gt; _E.g. when the given address is not well-formatted._
+* Error 500: Internal Server Error - &lt;forwarded error from the Kasparov API Server&gt;
 
 ## Receiving Funds
 
-If you have just created your wallet, your wallet address will have a balance of Zero. In order to send a transaction, you need a positive balance. To get some Kaspa in your wallet, you can do one of three things:
+If you have just created your wallet, your wallet address will have a balance of Zero. In order to send a transaction, you need a positive balance. To get some Kaspa in your wallet, you may do one \(or more\) of the following three things:
 
 * [ ] [Set up a miner](untitled-1/), and let it mine Kaspa into your wallet address.
-* [ ] Get someone to send you some Kaspa \(ask on [Discord](https://discord.gg/WmGhhzk)\).
+* [ ] Ask someone to send you some Kaspa \(ask on [Discord](https://discord.gg/WmGhhzk)\).
 * [ ] Use the [Faucet](faucet.md) to drop you some Kaspa.
 
 ## Sending a Transaction
 
-To send a transaction, enter the command `wallet send` with the following input parameters:
+To send a transaction, enter the command `wallet send` with the following input arguments:
 
 * `private_key` - the private key to access the unspent Kaspa on the source address.
-* `to_address` - the public address to send the unspent Kaspa to.
-* `send_amount` - the amount of Kaspa to send \(decimal number with up to 9 digits after the decimal point, e.g. 1,234.123456789\).
-* `api_address` - the address of the Kasparov API Server, to relay the transaction to the network through.
+* `to_address` - the destination public address to send Kaspa to.
+* `send_amount` - the amount of Kaspa to send \(decimal number with up to 8 digits after the decimal point, e.g. 1,234.123456789\).
+* `kasparov_address` - the address of the Kasparov API Server, to relay the transaction to the network through. Must include https:// \(e.g. [https://kasparov.kas.pa](https://kasparov.kas.pa)\).
 
 {% hint style="info" %}
-_Input fee is currently not supported. The fee will be determined by the difference between the inputs used by the transaction and_ send\_amount_._
+_Fee input is currently not supported. The fee will be a constant 1,000 Sompis \(equals to KAS 0.00001\)._
 {% endhint %}
 
 ```text
 $ wallet send --private_key=tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsxawgt
               --to_address=kaspatest:qr6m7j9njldwwzlg9v7v53unlr4jkmx6eylep8ekg2
               --send_amount=1,234.12345678
-              --api_address=api.kas.pa
+              --kasparov_address=https://kasparov.kas.pa
+```
+
+{% hint style="success" %}
+The CLI Wallet will check validity of the private key, the destination public address and the amount. It will then get an updated balance, that will allow it to build a transaction locally. It will then relay the transaction, through the input Kasparov API Server, to the Kaspa network using the REST API method [POST /transaction](../reference/kasparov-api-server/requests-list.md#transaction).
+{% endhint %}
+
+Once the synchronous part of sending the transaction completes successfully \(i.e. a Kaspa node accepts the transaction to its mempool\), the CLI Wallet will output the transaction id to the console:
+
+```text
+$ wallet send --private_key=tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsxawgt
+              --to_address=kaspatest:qr6m7j9njldwwzlg9v7v53unlr4jkmx6eylep8ekg2
+              --send_amount=1,234.12345678
+              --kasparov_address=https://kasparov.kas.pa
+Transaction was sent successfuly.
+Transaction ID: feee746c516ee9e97ef71c913186425efa8ff273ec6a1d2c58a3f0a449adf683
 ```
 
 {% hint style="info" %}
-
+This marks the synchronous part of sending a transaction. It means that the transaction was accepted into the mempool - the waiting list of the network. It does not mean that the transaction was accepted into a block yet. The CLI Wallet does not yet support following up on the transaction's further lifecycle, and updating when the transaction gets accepted to a block, and when new blocks are built atop it.
 {% endhint %}
 
-The **system** builds a transaction locally.
+In case of an error in the synchronous part of sending the transaction, the CLI Wallet will output an error to console:
 
-The **system** chooses unspent outputs to use as _inputs for the transaction_.  
-E.g. by adding unspent outputs from oldest to newest, until their running sum is larger or equal to the send\_amount.
+```text
+$ wallet send --private_key=tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsxawgt
+              --to_address=kaspadev:qr6m7j9njldwwzlg9v7v53unlr4jkmx6eylep8ekg2
+              --send_amount=1,234.12345678
+              --kasparov_address=https://kasparov.kas.pa
+Error 403: Access denied.
+```
 
-The **system** builds a transaction that uses the _inputs for the transaction_ to pay the send\_amount to the to\_address
+Possible errors:
 
-_The result of the above process is a Transaction ID, generated locally._
+* Client side errors:
+  * Error: private\_key is invalid.
+  * Error: send\_amount is invalid. send\_amount must be in Kaspa.
+  * Error: send\_amount is invalid. send\_amount must be in the valid range.
+* API errors:
+  * Error 422: Unprocessable Entity - &lt;forwarded error from the Kaspa node&gt;
+  * Error 500: Internal Server Error - &lt;forwarded error from the API Server&gt;
 
-The **system** sends the built transaction to the API Server available at the address specified by the inputapi\_address.
+## Displaying the version
 
-The REST API method is POST /transaction
+To display the CLI wallet version, enter the command `wallet --version`:
 
-The method returns 200 OK on success or an error code.
+```text
+$ wallet --version
+```
 
-The **system** waits for a reply from the API Server.
+{% hint style="success" %}
+The CLI Wallet will display the version.
+{% endhint %}
 
-In case of an error, outputs the error code and message received from the API Server to console.`1 2 3 4 5` `$ wallet send --private_key=tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsxawgt --to_address=kaspadev:qr6m7j9njldwwzlg9v7v53unlr4jkmx6eylep8ekg2 --send_amount=1,234.12345678 --api_address=api.kas.pa Error 403: Access denied.`
+```text
+$ wallet --version
+Kaspa CLI Wallet Version 0.0.1
+```
 
-In case of success, outputs the \(hash of the\) Transaction ID to the console.`1 2 3 4 5` `$ wallet send --private_key=tb1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsxawgt --to_address=kaspatest:qr6m7j9njldwwzlg9v7v53unlr4jkmx6eylep8ekg2 --send_amount=1,234.12345678 --api_address=api.kas.pa Transaction ID: feee746c516ee9e97ef71c913186425efa8ff273ec6a1d2c58a3f0a449adf683`
+## Displaying the help
+
+To display the list of acceptable CLI Wallet commands, enter the command `wallet --help`:
+
+```text
+$ wallet --help
+```
+
+{% hint style="success" %}
+The wallet will display a list of accepted commands.
+{% endhint %}
+
+```text
+$ wallet --help
+
+```
+
+To display help on a specific command, enter the command `wallet <command> --help`, e.g. `wallet send --help` will display help on the `wallet send` command.
+
+```text
+$ wallet send --help
+```
+
+{% hint style="success" %}
+The wallet will display help on the specific command.
+{% endhint %}
+
+```text
+$ wallet send --help
+
+```
 

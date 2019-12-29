@@ -5,6 +5,7 @@
 ## About Kaspa
 
 * [Kaspa Overview](about-kaspa/kaspa-overview/README.md)
+  * [WORKING DRAFT: Kaspa Whitepaper](about-kaspa/kaspa-overview/working-draft-kaspa-whitepaper.md)
   * [Phantom Consensus](about-kaspa/kaspa-overview/dag-consensus.md)
   * [Kaspa Transactions](about-kaspa/kaspa-overview/transaction.md)
   * [Proof of Work](about-kaspa/kaspa-overview/blocks-dag-and-pow.md)
