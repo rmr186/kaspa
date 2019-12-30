@@ -30,7 +30,7 @@ You are encouraged to read how the blockDAG consensus works and how it generaliz
 
 If you want to get your hands dirty and play with Kaspa, you may join the Kaspa TestNet and:
 
-* [ ] Create a wallet and send Kaspa with the [Kaspa CLI Wallet](../../try-kaspa/untitled.md)
+* [ ] Create a wallet and send Kaspa with the [Kaspa CLI Wallet](../../try-kaspa/cli-wallet.md)
 * [ ] Join the decentralized network and [run a Kaspa node](../../try-kaspa/running-a-node/) or a [Kasparov API Server](../../try-kaspa/api-server/)
 * [ ] Be one of the first to [mine Kaspa](../../try-kaspa/untitled-1/).
 

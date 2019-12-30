@@ -230,52 +230,46 @@ The consensus layer is a SoV environment, containing Kaspa transactions.
 
 #### 2.1.1 - PHANTOM
 
-The consensus layer uses [PHANTOM](https://eprint.iacr.org/2018/104.pdf), a PoW-based blockDAG consensus protocol that generalizes over Nakamoto consensus, developed by Yonatan Sompolinsky and Aviv Zohar at the Hebrew University of Jerusalem. In PHANTOM, when a miner creates a new block, instead of referencing the latest block, or tip, of the single longest chain in his locally observed graph of blocks, he references all tips of the graph \(even when there are double spends\), creating a directed acyclic graph \(DAG\) of blocks. Each node extracts transaction consistency from its locally observed blockDAG by running the PHANTOM algorithm on it, which assigns a linear ordering to the blocks, and thus, a linear ordering to the transactions, from which double spends can be eliminated. As shown in the original paper, PHANTOM guarantees fast \(probabilistic\) agreement among all the nodes despite any differences in their locally observed DAGs. Since it alleviates Bitcoin’s high-orphan-rate-induced scalability-security tradeoff, PHANTOM achieves subsecond block times, fast confirmation times, high throughput, and through the resulting highly granular block rewards, decentralization of mining, all without weakening consensus security; PHANTOM removes consensus security as a bottleneck for scalability. The alleviation of this tradeoff also introduces resilience to [selfish mining](https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf) schemes.
+[PHANTOM](https://eprint.iacr.org/2018/104.pdf), developed by Yonatan Sompolinsky and Aviv Zohar at the Hebrew University of Jerusalem, is a proof-of-work based blockDAG consensus protocol, that generalizes over the Nakamoto consensus. Rather than pointing to the latest block, or the tip of the single longest chain, consequently forming a chain of blocks; in PHANTOM, blocks point to all tips of their miners' locally observed graph, even when there are double spends, creating a directed acyclic graph \(DAG\) of blocks—a blockDAG. Each node extracts transaction consistency from its locally observed blockDAG, by running the PHANTOM algorithm on it, which assigns a linear order to the blocks, and thus, a linear order to the transactions, from which double spends can be eliminated. As shown in the original paper, PHANTOM guarantees fast, probabilistic agreement among all nodes, despite any differences in their locally observed blockDAGs. By alleviating Bitcoin’s high-orphan-rate-induced scalability–⁠security tradeoff, PHANTOM achieves subsecond block times, fast confirmation times, high throughput, and—consequent to the higher granulation of block reward—higher mining decentralization, all without compromising consensus security; PHANTOM diminishes consensus security as a bottleneck for scalability, and by doing so also introduces resilience to [selfish mining](https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf) schemes.
 
-As a high level description, PHANTOM takes as input a blockDAG and outputs an ordering of its blocks. It does so by identifying a cluster of well-connected \(blue\) blocks and ordering the DAG in a way that favors them over the other \(red\) blocks. The red blocks’ low connectivity in the DAG implies that, with high probability, they were produced by attacker nodes that withheld them or deliberately referenced an outdated state of the DAG. This assumes attackers’ total hashrate is &lt;50%.
+PHANTOM takes a blockDAG as input, and outputs an ordering of its blocks. It does so by identifying a cluster of well-connected \(blue\) blocks, and ordering the blockDAG in a way that favors them over less connected \(red\) blocks. The red blocks’ low connectivity in the DAG implies that, with high probability, they were produced by attacker nodes that withheld them, or deliberately referenced an outdated state of the DAG. This assumes the attackers’ do not control more than 50% of the hashrate.
 
 **Terminology**
 
-The following terminology is used in the authors' technical descriptions of PHANTOM. Let _G_ = \(_C_, _E_\) be a DAG that a miner observes locally, where _C_ denotes nodes, i.e. blocks, and _E_ denotes edges, i.e. hash references to previous blocks. Let _B_ be a block in _C_.
+Borrowing from the PHANTOM whitepaper, let$$G = (C, E)$$be a DAG locally observed by a miner, where$$C$$denotes blocks, and$$E$$denotes edges, i.e. hash references to previous blocks. Let$$B$$be a block in$$C$$.
 
-* _**past**_**\(**_**B**_**\)** is the set of blocks reachable from _B_ \(blocks that _B_ point to directly or indirectly\).
-* _**future**_**\(**_**B**_**\)** is the set of blocks from which _B_ is reachable \(blocks that point to _B_ directly or indirectly\).
-* _**anticone**_**\(**_**B**_**\)** is the set of blocks outside of {_B_, _past_\(_B_\), _future_\(_B_\)} \(blocks that cannot reach or be reached from _B_\). It is unclear whether a block came before or after another block in its anticone.
-* _**tips**_**\(**_**G**_**\)** is the set of blocks without any blocks pointing to it \(usually, the most recent blocks\).
-
-These terms are illustrated in the following image.
+* $$past(B)$$is the set of blocks reachable from$$B$$\(blocks, that$$B$$directly or indirectly points to\).
+* $$future(B)$$is the set of blocks, from which$$B$$is reachable \(blocks, that directly or indirectly point to$$B$$\).
+* $$anticone(B)$$ is the set of blocks outside of the cone$$\{B, past(B), future(B)\}$$\(blocks that cannot reach$$B$$, nor be reached from$$B$$\). Due to the lack of global clock, it is unclear whether a block came before or after other blocks in its anticone.
+* $$tips(G)$$ is the set of blocks, not referenced by any other blocks \(usually, the most recent blocks\).
 
 ![DAG concepts: past, future, cone, anticone, tips](../../.gitbook/assets/image%20%287%29.png)
 
-We can now describe PHANTOM in more detail.
-
 **The PHANTOM Protocol**
 
-Miners in PHANTOM are expected to reference, in their new blocks, all blocks in _tips_\(_G_\), and publish their blocks as quickly as possible. Intuitively, blocks created by honest miners \(which we assume make up &gt;50% of the network\) are more "well-connected" than blocks created by miners who do not follow the default policy. The PHANTOM authors expand on this as follows:
+Miners in PHANTOM are expected to reference, in their new blocks, all blocks in$$tips(G)$$, and publish their blocks as quickly as possible. Assuming honest miners control over 50% of the hashrate, intuitively, blocks created by them are more "well-connected" than blocks created by miners who do not follow the default policy. The PHANTOM authors expand on this as follows:
 
-> Indeed, let _D_ be an upper bound on the network’s propagation delay. If block _B_ was mined by an honest miner at time _t_, then any block published before time _t_ - _D_ necessarily arrived at its miner before time _t_, and is therefore included in _past_\(_B_\). Similarly, the honest miner will publish B immediately, and so _B_ will be included in the past set of any block mined after time _t_ + _D_. As a result, the set of honest blocks in B’s anticone is typically small, and consists only of blocks created in the interval \[_t_ − _D_, _t_ + _D_\]. The proof-of-work mechanism guarantees that the number of blocks created in an interval of length 2 · _D_ is typically below some _k_ &gt; 0.
+> Let$$D$$be an upper bound on the network’s propagation delay. If block$$B$$was mined by an honest miner at time$$t$$, then any block published before time$$t-D$$necessarily arrived at its miner before time$$t$$, and is therefore included in$$past (B )$$. Similarly, the honest miner will publish$$B$$immediately, and so$$B$$will be included in the past set of any block mined after time$$t+D$$. As a result, the set of honest blocks in $$B$$'s anticone is typically small, and consists only of blocks created in the interval$$[t-D, t+D]$$. The proof-of-work mechanism guarantees that the number of blocks created in an interval of length$$2·D$$is typically below some $$k$$.
 
-In other words, if B is an honest block, then the honest blocks in B's anticone are few and due to the network propagation delay, which is approximated by a constant _k_. _k_ is at the core of the PHANTOM protocol; PHANTOM captures the well-connected set of blocks in a DAG by defining a "_k_-cluster", as follows:
+In other words, due to the low assumed network propagation delay, which is approximated by a constant $$k$$_,_ if$$B$$is an honest block, then the honest blocks in$$B$$'s anticone are few and capped at $$k$$. PHANTOM captures the well-connected set of blocks in a DAG by defining a "$$k$$-cluster", as follows:
 
-> Given a DAG _G_ = \(_C_, _E_\), a subset _S_ ⊆ _C_ is called a _**k**_**-cluster**, if ∀_B_ ∈ _S_: \|_anticone_\(_B_\) ∩ _S_\| ≤ _k_.
+> Given a DAG$$G = (C, E)$$, a subset$$S ⊆C$$is called a $$k$$-cluster, if $$∀B ∈S: |anticone(B) ∩ S | ≤ k$$
 
-In other words, a _k_-cluster is a subset of blocks in a DAG such that each block in the subset has _k_ or fewer of the other blocks in the subset in its anticone.
+In other words, a$$k$$-cluster is a subset of blocks in a DAG such that each block in the subset has$$k$$or fewer of the other blocks in the subset in its anticone. In order to find the most well-connected group of blocks, PHANTOM solves the optimization problem of finding the largest possible $$k$$-cluster in a blockDAG. This problem is formalized as follows:
 
-Therefore, to find the most well-connected group of blocks, the PHANTOM protocol solves the optimization problem of finding the largest possible _k_-cluster in a blockDAG. This problem is formalized as follows:
+> **Maximum** $$k$$**-cluster SubDAG \(**$$MCS_k$$**\)  
+> Input:** DAG $$G = (C, E)$$   
+> **Output:** A subset $$S\text* ⊂ C$$ of maximum size, such that$$|anticone (B) ∩ S\text*| ≤ k$$ for all$$B ∈ S\text*$$
 
-> **Maximum** _**k**_**-cluster SubDAG \(**_**MCS\_k**_**\)** **Input:** DAG _G_ = \(_C_, _E_\) **Output:** A subset _S\*_ ⊂ C of maximum size, s.t. \|anticone \(_B_\) ∩ _S\*_\| ≤ _k_ for all _B_ ∈ _S\*_.
+PHANTOM "colors" all blocks in the $$k$$-cluster blue \(probably honest\) and all other blocks red \(probably malicious\). We use an example of a 3-cluster from the paper to illustrate PHANTOM:
 
-PHANTOM "colors" all blocks in the _k_-cluster blue \(probably honest\) and all other blocks red \(probably malicious\).
+![A 3-cluster, a k-cluster with k=3](../../.gitbook/assets/image%20%284%29.png)
 
-We use an example of a 3-cluster from the paper to illustrate PHANTOM:
+> It is easy to verify that each of these blue blocks has at most $$k=3$$ blue blocks in its anticone, and \(a bit less easy\) that this is the largest set with this property.
 
-![k-cluster \(k=3\)](../../.gitbook/assets/image%20%284%29.png)
+After solving$$MCS_k$$, PHANTOM topologically sorts the DAG, favoring blue blocks over red blocks, e.g., when ordering, add red blocks right before a blue block$$B$$only if it is in $$past(B)$$, resulting in a global block order from which a consistent transaction order can be extracted.
 
-"It is easy to verify that each of these blue blocks has at most 3 blue blocks in its anticone, and \(a bit less easy\) that this is the largest set with this property."
-
-After solving _MCS\_k_, PHANTOM uses any simple topological sort to order the DAG, favoring blue blocks over red blocks \(e.g., when ordering, add red blocks right before a blue block _B_ only if it is in _past_\(_B_\)\), resulting in a total block order from which a consistent transaction set can be extracted.
-
-_MCS\_k_, however, is [NP-hard](https://en.wikipedia.org/wiki/NP-hardness), and thus is not suitable for a growing blockDAG. Kaspa uses a greedy version of PHANTOM, called GHOSTDAG, that is possible to implement.
+$$MCS_k$$, however, is [NP-hard](https://en.wikipedia.org/wiki/NP-hardness), and thus is not suitable for a growing blockDAG. Kaspa uses a greedy version of PHANTOM, called GHOSTDAG, that is possible to implement.
 
 **The GHOSTDAG Protocol**
 
