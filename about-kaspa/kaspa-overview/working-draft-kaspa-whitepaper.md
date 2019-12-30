@@ -10,43 +10,11 @@ Notably, Kaspa diverges culturally from Bitcoin: the Bitcoin community promotes 
 
 This whitepaper describes the core concepts that motivate the Kaspa project, and outlines the system’s technical architecture and use cases.
 
-## Table of Contents
-
-* 1 - [Core Concepts]()
-  * 1.1 - [The Satoshi Nakamoto Narrative]()
-  * 1.2 - [Mining Decentralization]()
-  * 1.3 - [Scalability]()
-  * 1.4 - [Privacy]()
-  * 1.5 - [Decentralized Credit]()
-* 2 - [Architectural Details]()
-  * 2.1 - [Consensus Layer]()
-    * 2.1.1 - [PHANTOM]()
-    * 2.1.2 - [UTXOs]()
-    * 2.1.3 - [Full Node Efficiency]()
-    * 2.1.4 - [Privacy]()
-    * 2.1.5 - [OPoW]()
-    * 2.1.6 - [Coin Issuance](https://github.com/kaspanet/documentation/blob/master/216---coin-issuance)
-  * 2.2 - [Smart Contract Layer]()
-    * 2.2.1 - [High-Level Description]()
-    * 2.2.2 - [Silo State and Commitments]()
-    * 2.2.3 - [Staking]()
-    * 2.2.4 - [Disputes]()
-    * 2.2.5 - [Silo Outbox]()
-    * 2.2.6 - [Virtual Machine]()
-  * 2.3 - [Rich Web of Trust Layer]()
-    * 2.3.1 - [Webs of Trust](https://github.com/kaspanet/documentation/blob/master/231---webs-of-trust)
-    * 2.3.2 - [Interaction with Lower Layers]()
-    * 2.3.3 - [Sybil Resistance]()
-* 3 - [Applications]()
-  * 3.1 - [Stable Tokens]()
-  * 3.2 - [Web of Trust Applications]()
-* 4 - [Conclusion]()
-
-## 1 - Core Concepts
+## 1. Core Concepts
 
 Kaspa is centered on several core concepts. In describing these concepts, this section also introduces the components of Kaspa.
 
-### 1.1 - The Satoshi Nakamoto Narrative
+### 1.1. The Satoshi Nakamoto Narrative
 
 \[1 paragraph intro to Bitcoin - explain nakamoto consensus, pow\]
 
@@ -63,7 +31,7 @@ Indeed, we believe that a system’s ability to gain trust \(and wealth\) as a s
 
 In these characteristics, Kaspa follows the Bitcoin tradition.
 
-#### 1.1.1 - Alternative Consensus Tradeoffs
+#### 1.1.1. Alternative Consensus Tradeoffs
 
 Alternative consensus protocols for cryptocurrencies, notably, proof of stake, are still highly experimental with untested security properties.
 
@@ -71,7 +39,7 @@ Alternative consensus protocols for cryptocurrencies, notably, proof of stake, a
 
 Nakamoto consensus is the most robust and best-proven consensus system, and so Kaspa builds on its core design.
 
-### 1.2 - Mining Decentralization
+### 1.2. Mining Decentralization
 
 While Nakamoto consensus is the best-proven and most trusted foundation for a store of value cryptocurrency, Bitcoin’s increasing mining centralization is increasingly undermining its soundness.
 
@@ -81,7 +49,7 @@ Alternative projects’ attempts to decentralize mining by reverting to commodit
 
 Kaspa is better designed for mining decentralization than existing cryptocurrencies in three aspects: more decentralized consensus, more decentralized proof of work mining, and more decentralized money distribution.
 
-#### 1.2.1 - Decentralized Consensus
+#### 1.2.1. Decentralized Consensus
 
 Kaspa uses PHANTOM consensus, which is a blockDAG consensus protocol that generalizes over Nakamoto consensus. PHANTOM, by including all “orphan” blocks in the directed acyclic graph \(DAG\) ledger and ordering them in such a way to fairly extract transaction consistency, solves blockchain’s traditional orphan rate problem, and so can achieve orders-of-magnitude faster and bigger blocks than can Nakamoto consensus.\* This greatly reduces the variance of mining income, thus increasing the viability of smaller mining entities.\*\*
 
@@ -89,17 +57,17 @@ Kaspa uses PHANTOM consensus, which is a blockDAG consensus protocol that genera
 
 \*\*BlockDAG protocols like [SPECTRE](https://eprint.iacr.org/2016/1159.pdf) and PHANTOM allow an arbitrary block rate and size increase without compromising security, but, to avoid network congestion, the increase must be limited to what the nodes can handle. PHANTOM can conservatively achieve 10 1MB blocks per second in a typical network, sped up from Bitcoin's 1 block per 10 minutes. This speedup allows a miner with one 16 TH/s DragonMint ASIC in a 100M TH/s network to increase his block creation expectation from 1 block in every 120 years to 1 block a week.
 
-#### 1.2.2 - Decentralized Proof of Work
+#### 1.2.2. Decentralized Proof of Work
 
 Kaspa uses optical proof of work \(OPoW\), a proof of work algorithm that is secured with a Bitcoin-like SHA hash function, but designed for mining with ultra energy efficient photonic chips, which require high capital expenses \(CapEx\) and low operational expenses \(OpEx\). This shift from the traditional high OpEx mining model to a high CapEx low OpEx model enables more geographical decentralization of mining, since mining is no longer heavily advantaged by energy economies of scale. Furthermore, small players will not suffer losses from ongoing OpEx; they will simply have a longer return on investment period.
 
-#### 1.2.3 - Decentralized Money Distribution
+#### 1.2.3. Decentralized Money Distribution
 
 Kaspa uses hashrate-pegged inflation \(HAPI\) **\[tentative\]**, a novel coin issuance model that decreases inflation as network hashrate increases. This yields an interesting effect: by increasing one’s own hashrate, one decreases the marginal profits on one’s existing mining machines. This effect exists in Bitcoin as well, but is enhanced by HAPI. It can be shown that a mining entity is disincentivized to increase their hashrate earlier \(i.e., in smaller hashrates\) than it would be in a Bitcoin-like minting setup.
 
 Thus, Kaspa’s decentralized money distribution, along with its decentralized proof of work and consensus, contribute to its mining decentralization, a key property of a store of value cryptocurrency.
 
-### 1.3 - Scalability
+### 1.3. Scalability
 
 Bitcoin’s one-block-per-ten-minutes block rate not only hurts mining decentralization, but also greatly limits its transaction processing speed and confirmation times\*, highlighting that it is a naive, version one protocol. As regularly cited, PayPal and Visa’s transaction volumes eclipse Bitcoin’s by many orders of magnitude, and Bitcoin’s default six-block confirmation time contribute to its infeasibility as a widespread medium of exchange. Further, Bitcoin’s “everyone should be their own bank” ethos, which encourages the proliferation of full nodes that verify all historical transactions, limits its throughput and speed of syncing new nodes. These are part of Bitcoin’s traditional scaling problem, its inability to handle an increasing amount of work or accommodate an increasing number of participants, compared to centralized transaction systems.
 
@@ -115,7 +83,7 @@ Kaspa preserves the social scalability of Bitcoin while aspiring to high computa
 
 \*For an introduction to and comparison of confirmation times in Bitcoin and blockDAGs, see [this blog post](https://blog.daglabs.com/confirmation-times-in-spectre-7f68fec0d997).
 
-#### 1.3.1 - Fast Confirmation Times
+#### 1.3.1. Fast Confirmation Times
 
 The confirmation time of a transaction is the time it takes for the transaction to become effectively irreversible. PHANTOM arguably achieves fast confirmation times since it has a high block rate, thus fast one-block confirmations; and blockDAG reorgs only affect conflicting transactions \(whereas blockchain reorgs affect whole forks that contain conflicting transactions\), thus nodes can adjust their confirmation times even further down depending on the presence of an attacker, as described in [this blog post](https://blog.daglabs.com/confirmation-times-in-spectre-7f68fec0d997).
 
@@ -125,13 +93,13 @@ A counterargument is that in an ASIC environment, the cost of attack is not capt
 
 Regardless, having a fast “first confirmation” is in itself a highly useful improvement, particularly for use cases where merchants are concerned with the time to the first block, or confirmation, but not to irreversibility.
 
-#### 1.3.2 - Vis-À-Vis Layer 2 Scaling Solutions
+#### 1.3.2. Vis-À-Vis Layer 2 Scaling Solutions
 
 Using PHANTOM to achieve fast confirmations is a much simpler solution than Bitcoin’s layer 2 Lightning Network solution, which comes with a list of challenges: its complex UX, its need for trusted and available watch towers, its unfitness for large payments, its centralization dynamics, etc.
 
 \[incomplete\]
 
-#### 1.3.3 - High Throughput
+#### 1.3.3. High Throughput
 
 An improvement on confirmation speed entails an improvement on throughput. PHANTOM’s high block rate allows Kaspa to scale in throughput orders of magnitude over Bitcoin.\* Moreover, in addition to Bitcoin’s low block rate, Bitcoin’s cultural norm of "full validation as a necessary condition for self sovereignty" is a scalability bottleneck.
 
@@ -147,11 +115,11 @@ In sum, Kaspa’s underlying blockDAG contributes not only to mining decentraliz
 
 \*\*In non-Bitcoin communities, e.g., Ethereum, it is common to refer to nodes that are validating present transactions as full nodes even if they didn't validate the history upon joining. We opt for this definition of “full”.
 
-### 1.4 - Privacy
+### 1.4. Privacy
 
 \[incomplete\]
 
-### 1.5 - Expressive Money
+### 1.5. Expressive Money
 
 Application environments for decentralized, expressive money are highly useful and demanded. Decentralized financial products should be built on top of sound money bases, and vice versa—to contribute to the “DeFi” landscape, a decentralized, scalable, and privacy-oriented currency should serve as a railing for financial products.
 
@@ -170,7 +138,7 @@ The fundamental challenge is the second bullet point, Ethereum’s architectural
 
 \*Ethereum founder Vitalik Buterin expands on this need for a scalable data layer in [this post](https://ethresear.ch/t/bitcoin-cash-a-short-term-data-availability-layer-for-ethereum/5735).
 
-#### 1.5.1 - Decoupled Layers
+#### 1.5.1. Decoupled Layers
 
 Kaspa attempts to solve Ethereum’s architectural challenge by decoupling its system into two fundamental layers: a base layer and a computation layer. The base layer is a sound money layer that maintains global consensus and provides reorg resistance, proof of publication, and data availability. In Kaspa, this layer uses PHANTOM consensus, which is, as described above, a Nakamoto-like blockDAG protocol. The computation layer is a smart contract system that uses the payload data of base-layer transactions to record function calls to the smart contract virtual machine. The VM state is defined deterministically by the order of these function calls. Thus, every interested party can compute the VM state locally and is guaranteed that all other clients that read the VM agree on its state \(modulo the waiting time for sufficient irreversibility as guaranteed by the base layer’s reorg resistance\). Uninterested parties simply treat it as payload data and ignore its meaning; miners and full nodes on the base layer do make sure the data has been published \(proof of publication\). Moreover, different use cases can live separately in different VM instances—hence, we call these VM instances “silos”.
 
@@ -180,7 +148,7 @@ Additionally, Bitcoin suffers from high confirmation times and is not natively b
 
 In short, Kaspa aims to make up Bitcoin’s expressiveness shortcomings and Ethereum’s soundness shortcomings, contributing to the DeFi landscape, by providing a decoupled but two-way-pegged stack of a base consensus layer and a smart contract environment computation layer.
 
-### 1.6 - Decentralized Credit
+### 1.6. Decentralized Credit
 
 The DeFi landscape has not reached its full potential in expressiveness—it currently lacks an effective platform for undercollateralized credit.
 
@@ -192,7 +160,7 @@ There are three apparent reasons for this:
 
 Kaspa aims to address these issues and diverge from crypto’s overcollateralized economy by providing a third, topmost layer in its stack that serves as an environment for sufficiently self-sovereign, locally-rooted, decentralized credit, reputation, and trust systems. These systems are [Lightning Network](https://lightning.network/)-like; although Kaspa obviates the need for layer 2 solutions for fast payments, we need Lightning’s concept of off-blockchain networks and crawling user graphs for extended expressivity and complexity, using the blockchain only as an arbiter. Diving deeper into the graph theory of Lightning, we arrive at the original "Web of Trust" concept.
 
-#### 1.6.1 - Web of Trust
+#### 1.6.1. Web of Trust
 
 Kaspa’s third layer aims to be an environment to bootstrap webs of trust. “Web of Trust” originated from the Pretty Good Privacy \(PGP\) encryption program as a method for peer-to-peer public key verification—direct trust relationships established between friends or at key-signing parties would digitally chain, interweave, and cumulate into larger webs, or graphs, of trust, enabling well-informed trust paths among complete strangers.
 
@@ -214,7 +182,7 @@ The connectivity of webs of trust enables complex trust relationships among part
 
 In sum, Kaspa aims to provide, as its topmost layer, an environment for undercollateralized, decentralized credit, inspired by Lightning and web of trust systems. This environment is, furthermore, informed by concepts of logical decentralization, local knowledge, and skin in the game.
 
-## 2 - Architectural Details
+## 2. Architectural Details
 
 This section expands on the Kaspa architecture. Kaspa is a symbiotic consensus stack that enables a robust, trustless store of value \(SoV\) currency, medium of exchange currencies \(MoEs\) and other programmable financial products, and rich webs of trust \(WoTs\) that provide real-world context. Particularly, this stack consists of:
 
@@ -224,11 +192,11 @@ This section expands on the Kaspa architecture. Kaspa is a symbiotic consensus s
 
 These layers are described in detail in the following sections.
 
-### 2.1 - Consensus Layer
+### 2.1. Consensus Layer
 
 The consensus layer is a SoV environment, containing Kaspa transactions.
 
-#### 2.1.1 - PHANTOM
+#### 2.1.1. PHANTOM
 
 [PHANTOM](https://eprint.iacr.org/2018/104.pdf), developed by Yonatan Sompolinsky and Aviv Zohar at the Hebrew University of Jerusalem, is a proof-of-work based blockDAG consensus protocol, that generalizes over the Nakamoto consensus. Rather than pointing to the latest block, or the tip of the single longest chain, consequently forming a chain of blocks; in PHANTOM, blocks point to all tips of their miners' locally observed graph, even when there are double spends, creating a directed acyclic graph \(DAG\) of blocks—a blockDAG. Each node extracts transaction consistency from its locally observed blockDAG, by running the PHANTOM algorithm on it, which assigns a linear order to the blocks, and thus, a linear order to the transactions, from which double spends can be eliminated. As shown in the original paper, PHANTOM guarantees fast, probabilistic agreement among all nodes, despite any differences in their locally observed blockDAGs. By alleviating Bitcoin’s high-orphan-rate-induced scalability–⁠security tradeoff, PHANTOM achieves subsecond block times, fast confirmation times, high throughput, and—consequent to the higher granulation of block reward—higher mining decentralization, all without compromising consensus security; PHANTOM diminishes consensus security as a bottleneck for scalability, and by doing so also introduces resilience to [selfish mining](https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf) schemes.
 
@@ -251,7 +219,7 @@ Miners in PHANTOM are expected to reference, in their new blocks, all blocks in$
 
 > Let$$D$$be an upper bound on the network’s propagation delay. If block$$B$$was mined by an honest miner at time$$t$$, then any block published before time$$t-D$$necessarily arrived at its miner before time$$t$$, and is therefore included in$$past (B )$$. Similarly, the honest miner will publish$$B$$immediately, and so$$B$$will be included in the past set of any block mined after time$$t+D$$. As a result, the set of honest blocks in $$B$$'s anticone is typically small, and consists only of blocks created in the interval$$[t-D, t+D]$$. The proof-of-work mechanism guarantees that the number of blocks created in an interval of length$$2·D$$is typically below some $$k$$.
 
-In other words, due to the low assumed network propagation delay, which is approximated by a constant $$k$$_,_ if$$B$$is an honest block, then the honest blocks in$$B$$'s anticone are few and capped at $$k$$. PHANTOM captures the well-connected set of blocks in a DAG by defining a "$$k$$-cluster", as follows:
+In other words, due to the low assumed network propagation delay, which is approximated by a constant $$k$$_,_ if$$B$$is an honest block, then the honest blocks in$$B$$'s anticone are few and capped at $$k$$. PHANTOM captures the well-connected set of blocks in a DAG by defining a$$k$$-cluster, as follows:
 
 > Given a DAG$$G = (C, E)$$, a subset$$S ⊆C$$is called a $$k$$-cluster, if $$∀B ∈S: |anticone(B) ∩ S | ≤ k$$
 
@@ -261,13 +229,13 @@ In other words, a$$k$$-cluster is a subset of blocks in a DAG such that each blo
 > Input:** DAG $$G = (C, E)$$   
 > **Output:** A subset $$S\text* ⊂ C$$ of maximum size, such that$$|anticone (B) ∩ S\text*| ≤ k$$ for all$$B ∈ S\text*$$
 
-PHANTOM "colors" all blocks in the $$k$$-cluster blue \(probably honest\) and all other blocks red \(probably malicious\). We use an example of a 3-cluster from the paper to illustrate PHANTOM:
+PHANTOM "colors" well-connected blocks in the$$k$$-cluster blue \(probably honest\), and other blocks red \(probably malicious\). We use an example of a 3-cluster from the paper to illustrate PHANTOM:
 
 ![A 3-cluster, a k-cluster with k=3](../../.gitbook/assets/image%20%284%29.png)
 
 > It is easy to verify that each of these blue blocks has at most $$k=3$$ blue blocks in its anticone, and \(a bit less easy\) that this is the largest set with this property.
 
-After solving$$MCS_k$$, PHANTOM topologically sorts the DAG, favoring blue blocks over red blocks, e.g., when ordering, add red blocks right before a blue block$$B$$only if it is in $$past(B)$$, resulting in a global block order from which a consistent transaction order can be extracted.
+After solving$$MCS_k$$, PHANTOM topologically sorts the DAG, favoring blue blocks over red blocks, e.g. by adding a red block right before a blue block$$B$$only if it is in $$past(B)$$, resulting in a global block order from which a consistent transaction order can be extracted.
 
 $$MCS_k$$, however, is [NP-hard](https://en.wikipedia.org/wiki/NP-hardness), and thus is not suitable for a growing blockDAG. Kaspa uses a greedy version of PHANTOM, called GHOSTDAG, that is possible to implement.
 
@@ -291,11 +259,11 @@ In GHOSTDAG, finding the current blue set is needed to find _B_\_max in the futu
 
 For the formal GHOSTDAG algorithm and a walk-through of it, see section 2.4.1 of [the PHANTOM paper](https://eprint.iacr.org/2018/104.pdf).
 
-#### 2.1.2 - UTXOs
+#### 2.1.2. UTXOs
 
 Like Bitcoin, the consensus layer uses a UTXO model; specifically, our core client is a fork of [btcd](https://github.com/btcsuite/btcd), a Bitcoin implementation in Go. In the UTXO model, currency balances are updated by individual _unspent transaction outputs_ \(UTXOs\), which are, as named, the outputs of transactions, and are spent as input to other transactions. The total supply of spendable outputs is the _UTXO set_. This model, in which transactions determine changes in the UTXO set, has strong benefits over the account model, as used by Ethereum, in which transactions are events in the blockchain state machine: transactions in the UTXO model can be verified in parallel and with no extra overhead, and any smart contract running on top of this layer can more easily manage its own state, which is attached to the UTXOs. Moreover, the UTXO model is deterministic and allows the consensus layer to remain thin and isolated.
 
-#### 2.1.3 - Full Node Efficiency
+#### 2.1.3. Full Node Efficiency
 
 The consensus layer uses UTXO commitments, pruning, and a finality window, which ease the maintenance of existing full nodes and the syncing process for new nodes. As described in section 1.3.3, we believe this lightweight trust model effectively balances high throughput and self-sovereignty.
 
@@ -311,15 +279,15 @@ The consensus layer uses UTXO commitments, pruning, and a finality window, which
 
 \[incomplete\]
 
-#### 2.1.3 - Two-Way Pegging
+#### 2.1.3. Two-Way Pegging
 
 The consensus layer also provides native support for smart contract consensus: it supports staking, dispute resolution, transfer of transaction fees to virtual machine instances, and more. Crucially, it supports two-way pegging, rendering Kaspa the financial railing of all financial applications in the smart contract layer. We use the term "bridge" when referring to components that connect the consensus layer to the smart contract layer. The bridge architecture is detailed in the “Smart Contract Layer” section.
 
-#### 2.1.4 - Privacy
+#### 2.1.4. Privacy
 
 \[incomplete\]
 
-#### 2.1.5 - OPoW
+#### 2.1.5. OPoW
 
 This layer uses optical proof-of-work \(OPoW\) consensus, whose R&D efforts are primarily led by [PoWx](https://www.powx.org/). OPoW is a novel approach to PoW mining that runs on energy-efficient photonic co-processors. It shifts the cost of mining from operational expenses \(OPEX\), which contribute to energy waste, to capital expenses \(CAPEX\). It inherits its basic security from the SHA hash function, which is composed with a permutation that is optimized for photonic ASICs. OPoW solves PoW’s traditional shortcomings: it alleviates the environmental effects of mining and promotes geographical decentralization, mining democratization, censorship-resistant mining, and robust growth of hashrate.
 
@@ -327,15 +295,15 @@ Our plan is to launch with a dual PoW and \(algorithmically\) transition to OPoW
 
 More information about OPoW can be found in the [OPoW litepaper](https://www.powx.org/download-litepaper).
 
-#### 2.1.6 - Coin Issuance
+#### 2.1.6. Coin Issuance
 
 \[incomplete\]
 
-### 2.2 - Smart Contract Layer
+### 2.2. Smart Contract Layer
 
 On top of the consensus layer, the smart contract layer is an environment for operating virtual machine instances. This layer is decoupled from the base layer, such as in the family of “rollup” scaling solutions, which includes [Offchain Labs](https://offchainlabs.com/)' [Arbitrum](https://offchainlabs.com/Arbitrum-USENIX.pdf) and [Plasma Group](https://plasma.group/)'s [Optimistic Rollups](https://medium.com/plasma-group/ethereum-smart-contracts-in-l2-optimistic-rollup-2c1cef2ec537) \(OR\).
 
-#### 2.2.1 - High-Level Description
+#### 2.2.1. High-Level Description
 
 A virtual machine instance can be thought of, simply, as a set of interrelated smart contracts that are bootstrapped together and form this instance’s state. Henceforth we refer to these virtual machine instances as “silos”.
 
@@ -347,7 +315,7 @@ Arbitrum and OR differ in the way disputes are managed and proofs submitted, and
 
 The security of a silo relies on the dispute mechanism. The ability to use miners as referees in case of a dispute allows us to rely on the _any-trust_ assumption: it suffices to assume that a single honest manager exists and is online to provably finalize silo state commitments. This stems from the fact that any honest manager can use the dispute mechanism to challenge and penalize any false claim, hence by remaining silent an honest manager passively confirms correctness of claimed state.
 
-#### 2.2.2 - Silo State and Commitments
+#### 2.2.2. Silo State and Commitments
 
 A commitment to a silo state needs to specify the state it started executing from and the set of transactions it processed. Kaspa therefore requires that each commitment point to a previous commitment which represents the state it started executing from, and that it specify a reference block in the base-layer DAG, meaning it includes all silo transactions from the previous commitment up to the reference block.
 
@@ -405,7 +373,7 @@ Silo state must be periodically saved in _checkpoints_ to allow recovery from ba
 
 Syncing to silo state requires that one or multiple managers holding the complete silo state must send it to the interested newcoming manager. The receiving manager can check the validity of the state by hashing and comparing to on-chain silo commitments. The new manager should avoid making commitments to the silo until the state he received was proven as finalized. Another option is that he receives a checkpoint from a point at time which has been finalized already, so he can re-execute from that point on his own and make commitments as soon as possible.
 
-#### 2.2.3 - Staking
+#### 2.2.3. Staking
 
 To incentivize correct execution of a silo, miners must be able to penalize \(or reward\) silo managers for making \(or challenging\) false commitments. To support this, we define a staking mechanism in the base layer. Staking is also used to enforce an economically fair lottery for making commitments to a silo.
 
@@ -425,7 +393,7 @@ $$
 
 where _n_ is the overall number of current USTOs for this silo. This lottery results in an expectation of a single commitment ticket for each reference block \(a Binomial distribution with _n_ trials and _p_ = 1/_n_\). Overall, the chance to win a ticket grows linearly with the number of USTOs one holds. In the long run, this results in a fair distribution of commitment fees to all managers, where each manager earns fees proportionally to the number of tokens he owns, i.e. proportional to the amount of stake he was willing to lock as deposit.
 
-#### 2.2.4 - Disputes
+#### 2.2.4. Disputes
 
 At any time, a commitment to silo state can be challenged by any other interested party. Commitments can only be challenged while not yet finalized. The challenger must provide stake for backing up his challenge. This stake can be in the form of an already existing USTO or with native coins \(equal to a staking unit\). Once a challenger declares a challenge and the base layer processes it, a dispute process begins. Following the dispute process rules, which are described in the “Dispute Process” section below, one of the arguing parties loses and its stake is slashed. The winning party initiates the slashing as a special _request slashing transaction_ which "spends" the loser’s USTO, pays the winner half a staking unit in native coins, and burns the other half.
 
@@ -451,7 +419,7 @@ This dispute process image is inspired from page 10 of [Arbitrum's whitepaper](h
 
 Participants perform all dispute interactions as special on-chain transactions. They save the sent data in the dispute data structure so the ending proof can be validated against prior commitments made.
 
-#### 2.2.5 - Silo Outbox
+#### 2.2.5. Silo Outbox
 
 While executing silo function calls, the user may request, via the smart contract logic, to perform base-layer transactions. Such transactions may include transferring coins back to the consensus layer \(unpegging\), or making function calls to other silos \(composability\). We call such transactions the "output transactions" of a silo function call. Output transactions can only be published on-chain when the commitment including their initiating function call reaches finality. We now describe the process of post-finality publication of these transactions.
 
@@ -481,17 +449,17 @@ To address this challenge, instead of preparing actual transactions in the outbo
 
 Outbox transactions may contain function calls to other silos. Replay attacks and authorization are the concerns of the receiving silo. This means that function calls to other silos may be published before finality \(some function calls may include pegging native coins to the other silo and hence require post-finality\).
 
-#### 2.2.6 - Virtual Machine
+#### 2.2.6. Virtual Machine
 
 The virtual machine is the execution environment for the silo's smart contracts. The environment consists of a memory space representing silo state, smart contracts representing silo logic, and an interpreter for executing contract functions over silo state. In order to function properly over the consensus layer bridge and to support the any-trust model, the VM needs to \(i\) have completely deterministic execution, so distinct distributed managers can agree on its state; \(ii\) support hashing its entire state to a constant-size hash which will be used by managers to make on-chain commitments; and \(iii\) be able to provide proof for correct execution of a single step of the machine. Since the Kaspa VM is modelled from the Arbitrum VM, more details can be found in section 4.3 of the [Arbitrum paper](https://offchainlabs.com/Arbitrum-USENIX.pdf), and also in the VM section of the [extended Kaspa smart contract layer document](https://github.com/kaspanet/documentation/blob/master/Smart%20Contract%20Layer/Smart-Contract-Layer.md#virtual-machine).
 
-### 2.3 - Rich Web of Trust Layer
+### 2.3. Rich Web of Trust Layer
 
 On top of the smart contract layer, the rich web of trust layer is an environment for bootstrapping independent webs of trust \(WoTs\). A WoT is, simply, a trust graph whose topology is digitally signed by the participating nodes, and which enables users to authenticate and verify data and events without relying on trusted third parties. Existing smart contracts platforms fall short in addressing counterparty risks, as there is no native interaction between the contracts and real-world data and relationships. Rich WoTs intend to serve as a layer where real-world trust relationships are recorded, in different trust contexts: credit worthiness, identity attestation, personal integrity, reputation, etc. These WoTs enhance the expressiveness of the system by allowing smart contracts to interact with and verify the WoT data. They enable automatic on-contract interactions with third parties while protecting the user from counterparty risk.
 
 We refer to “rich” WoTs to allude to \(i\) a broader usage of these trust graphs than the prevalent usage, namely, decentralized identity attestation, \(ii\) the interaction of WoTs with the consensus layers, to affect and be affected by their logic.
 
-#### 2.3.1 - Webs of Trust
+#### 2.3.1. Webs of Trust
 
 A WoT is represented by a weighted directed graph \(V, E, w\), where V and E represent the set of nodes and the set of edges, respectively, and w is a weight function on edges. An edge _e_ = \(_u_, _v_\) ∈ E and its weight w\(_e_\) are considered valid only if they are signed by _v_’s public key. The interpretation of \(_e_, w\(_e_\)\) depends on the context of the corresponding WoT: it can represent the degree of general trust, the assigned reputation score, the allowed credit flow, an identity attestation, etc.
 
@@ -501,13 +469,13 @@ Importantly, the WoT structure induces a trust relationship between any pair \(_
 
 The above image is an example of a small web of trust. If we measure weight between two indirectly connected nodes as, for instance, half the sum of the edge weights on the minimal path between them, then $$w(A,H)=.5*(4+1+1)=3$$.
 
-#### 2.3.2 - Interaction with Lower Layers
+#### 2.3.2. Interaction with Lower Layers
 
 WoTs can be organically incorporated into smart contracts’ logic, by conditioning certain contract behaviors on given users’ contexts. For instance, Alice can let her funds be governed by a smart contract that will direct them as a loan according to her local view of a credit WoT. This replaces P2P lending platforms with a peer-to-contract flow, which saves on operational and intermediary costs, and interacts with the underlying SoV \(consensus layer\) and MoE \(smart contract layer\) in an organic way. More generally, smart contracts can now be context-aware, increasing their expressiveness, allowing integration of real world data and relationships, and, at the same time, preventing systemic damage from sybil nodes and fake accounts.
 
 The interaction between a smart contract and a WoT can go both ways: not only can the behavior of the smart contract be conditioned on WoT data as described above, but also, WoTs can be programmed to update based on on-chain data; for instance, the trust from Alice to Bob automatically increases upon an on-chain transaction from Bob to Charlie, which can make sense, e.g., if Charlie is an exchange compliant with AML/KMC regulations.
 
-#### 2.3.3 - Sybil Resistance
+#### 2.3.3. Sybil Resistance
 
 Without the proof-of-work that fuels the consensus layer, WoTs in the rich web of trust layer need another method to counter sybil nodes. The basic observation is that when the graph topology represents some real-world relationships, attackers are limited by their connectivity to honest nodes—it is not easy for an attacker to convince many honest users to trust them. Formally, for an honest node u and attacker node v, w\(v, u\) can be proven to be small under the assumption that the attacker’s connectivity to \(or trust from\) honest nodes \(technically, the size of the cut from honest nodes to attacker nodes\) is smaller than some threshold.
 
@@ -519,11 +487,11 @@ The following image roughly represents the full Kaspa consensus stack.
 
 ![Kaspa Stack](../../.gitbook/assets/image%20%286%29.png)
 
-## 3 - Applications
+## 3. Applications
 
 This section describes example applications of the Kaspa stack.
 
-### 3.1 - Stable Tokens
+### 3.1. Stable Tokens
 
 \[incomplete\]
 
@@ -534,7 +502,7 @@ We plan to implement a smart contract silo that will support a medium of exchane
 
 In the short term we will work on abstracting an existing stablecoin, and will assess the need to develop an independent stable token as the need arises and regulation status clears.
 
-### 3.2 - Web of Trust Applications
+### 3.2. Web of Trust Applications
 
 The rich web of trust layer opens up a host of potential use cases, many of which the decentralized identity community has explored. Our primary use case is decentralized lending and credit. Web of trust applications include:
 
@@ -546,7 +514,7 @@ The rich web of trust layer opens up a host of potential use cases, many of whic
 
 Web of trust allows us to actualize these decentralized trust systems, in the identity context and beyond.
 
-## 4 - Conclusion
+## 4. Conclusion
 
 As world citizens continue to question the soundness of fiat currencies and centralized financial institutions, we recognize the need for an alternative, sound money base that supports extensive financial applications in a cohesive, decentralized platform. Kaspa aims to fill this need with its three-layered stack of \(1\) global consensus, decoupled from \(2\) smart contract computation, with \(3\) webs of trust operating on top of the smart contracts. It makes up Bitcoin’s technological shortcomings, primarily, by using the novel PHANTOM blockDAG consensus protocol, which is a generalization on the core innovation of Satoshi Nakamoto, but improving upon Nakamoto consensus in transaction speed and mining decentralization. It also diverges from Bitcoin’s “everyone should be his own bank” norm, enabling a flexibility that expressive financial products require. At the same time, Kaspa adheres to several crucial Bitcoin-like characteristics---including a UTXO model, proof of work, thin base layer, and fixed monetary policy---which Ethereum, a project that aims to extend the usability of blockchain, lacks. Kaspa’s smart contract layer is similar to the family of “rollup” scaling solutions that have been proposed for Ethereum—but it operates on top of the fast, secure, blockDAG base layer. Finally, Kaspa’s topmost layer serves as a platform for web of trust applications, such as undercollateralized peer-to-peer credit, that have been thoroughly discussed in the decentralized identity and cryptography communities, which can piggyback off of the programmability of Kaspa’s smart contracts and the security and speed of its base layer.
 
