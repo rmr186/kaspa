@@ -8,6 +8,7 @@
   * [WORKING DRAFT: Kaspa Whitepaper](about-kaspa/kaspa-overview/working-draft-kaspa-whitepaper.md)
   * [Phantom Consensus](about-kaspa/kaspa-overview/dag-consensus.md)
   * [Kaspa Transactions](about-kaspa/kaspa-overview/transaction.md)
+  * [Subnetworks](about-kaspa/kaspa-overview/subnetworks.md)
   * [Proof of Work](about-kaspa/kaspa-overview/blocks-dag-and-pow.md)
   * [Pruning](about-kaspa/kaspa-overview/block-acceptance.md)
 * [Kaspa Smart Contract Layer](about-kaspa/smart-contracts/README.md)
