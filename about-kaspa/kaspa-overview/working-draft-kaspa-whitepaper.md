@@ -2,7 +2,7 @@
 
 ### Sound, expressive money
 
-Bitcoin was the first decentralized, permissionless digital currency, due to its revolutionary use of proof of work and a blockchain ledger for consensus. Ethereum was an extension of this concept, its smart contracts providing programmability and expressiveness. However, Bitcoin suffers from increasing mining centralization, low transaction processing, slow transaction confirmation times, and low expressiveness, impeding its scalability and usability. Ethereum’s governance centralization and uncertainties, its coupling of computation and consensus, and its planned move to proof of stake hinder its sound money conviction and chokepoint its complete expressiveness.
+Bitcoin was the first decentralized, permissionless digital currency, due to its revolutionary use of blockchain ledger and a proof-of-work consensus. Ethereum was an extension of this concept, its smart contracts providing programmability and expressiveness. Bitcoin, however, suffers from increasing mining centralization, low transaction throughput, slow confirmation times, and inadequate expressiveness, impeding its scalability and usability. Ethereum’s governance centralization and uncertainties, its coupling of computation and consensus, and its planned move to proof of stake hinder its sound money conviction and chokepoint its complete expressiveness.
 
 Kaspa presents a needed new paradigm for sound and expressive money by revisiting core concepts of previous generation blockchains. The Kaspa community believes the core design of the proof of work "Nakamoto consensus" of Bitcoin is the best-proven foundation for a store of value currency. Thus, Kaspa starts with a highly scalable and decentralized data and consensus layer using the [PHANTOM](https://eprint.iacr.org/2018/104.pdf) consensus protocol, which generalizes Nakamoto's blockchain into a directed acyclic graph of blocks \(blockDAG\), and [optical proof of work](https://arxiv.org/pdf/1911.05193.pdf) \(OPoW\), which is a sustainable and decentralizing proof of work algorithm. Kaspa has a computation layer similar to [Arbitrum](https://www.usenix.org/node/217514), [TrueBit](https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf), and [Optimistic Rollups](https://medium.com/plasma-group/ethereum-smart-contracts-in-l2-optimistic-rollup-2c1cef2ec537) \(Ethereum scaling proposals\), which is decoupled from the base layer to allow for a fast and robust native currency while supporting upper-layer use cases, such as stable tokens and undercollateralized credit systems.
 
@@ -211,7 +211,7 @@ Borrowing from the PHANTOM whitepaper, let$$G = (C, E)$$be a DAG locally observe
 * $$anticone(B)$$ is the set of blocks outside of the cone$$\{B, past(B), future(B)\}$$\(blocks that cannot reach$$B$$, nor be reached from$$B$$\). Due to the lack of global clock, it is unclear whether a block came before or after other blocks in its anticone.
 * $$tips(G)$$ is the set of blocks, not referenced by any other blocks \(usually, the most recent blocks\).
 
-![DAG concepts: past, future, cone, anticone, tips](../../.gitbook/assets/image%20%287%29.png)
+![DAG concepts: past, future, cone, anticone, tips](../../.gitbook/assets/image%20%288%29.png)
 
 **The PHANTOM Protocol**
 
@@ -319,7 +319,7 @@ The security of a silo relies on the dispute mechanism. The ability to use miner
 
 A commitment to a silo state needs to specify the state it started executing from and the set of transactions it processed. Kaspa therefore requires that each commitment point to a previous commitment which represents the state it started executing from, and that it specify a reference block in the base-layer DAG, meaning it includes all silo transactions from the previous commitment up to the reference block.
 
-![On-chain commitments](../../.gitbook/assets/image%20%288%29.png)
+![On-chain commitments](../../.gitbook/assets/image%20%2810%29.png)
 
 To simplify the discussion we abstract the base-layer's DAG structure into a blockchain by looking only at the _selected chain_ of the DAG. Commitments to a silo will only use reference blocks from the selected chain. This simplifies commitment management by providing a clear point of reference for synchronizing commitments made by different managers. Since silo commitments must be executed sequentially anyway, there is no apparent serialization cost by restricting commitments to the selected chain; high throughput is still achieved by parallel transaction mining and due to multiple silos operating independently in parallel.
 
